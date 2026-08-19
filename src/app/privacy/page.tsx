@@ -19,7 +19,7 @@ const sections = [
   },
   {
     title: "Optional End-to-End Encrypted Synchronization",
-    body: "If you choose to use our synchronization features to link devices, your data is encrypted client-side using industry-standard cryptographic keys before it ever leaves your device. RebelRoot servers act strictly as transit brokers and cannot decrypt your data.",
+    body: "If you choose to use our synchronization features to link devices, your data is encrypted client-side using industry-standard cryptographic keys before it ever leaves your device. NovaRoot servers act strictly as transit brokers and cannot decrypt your data.",
   },
   {
     title: "Open Source Verification",
@@ -37,7 +37,7 @@ export default function PrivacyPage() {
         </h1>
 
         <p className="mt-8 max-w-2xl text-center   leading-relaxed text-ink-muted">
-          Read the official RebelRoot Privacy Policy. Learn how our
+          Read the official NovaRoot Privacy Policy. Learn how our
           zero-telemetry and local-first architecture protects your personal
           data across all products.
         </p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           Our Commitment to Privacy
         </h1>
         <p className="mt-8 max-w-7xl text-center text-2xl leading-relaxed text-ink-muted">
-          Read the official RebelRoot Privacy Policy. Learn how our
+          Read the official NovaRoot Privacy Policy. Learn how our
           zero-telemetry and local-first architecture protects your personal
           data across all products.
         </p>

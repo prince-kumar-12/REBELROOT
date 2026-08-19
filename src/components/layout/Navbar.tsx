@@ -14,7 +14,7 @@ import { NOVA_EASE } from "@/lib/motion";
 
 const links = [
   { href: "/products", label: "Products" },
-  { href: "/omniBrowser", label: "Omni Docs" },
+  { href: "/docs", label: "Omni Docs" },
   { href: "/about", label: "About" },
   { href: "/support", label: "Support & Feedback" },
   { href: "/contact", label: "Contact" },
@@ -99,7 +99,7 @@ export function Navbar() {
 </span>
 </span>
           <span className="font-display text-sm font-semibold tracking-tight text-ink">
-            REBELROOT
+            NOVAROOT
           </span>
         </Link>
 

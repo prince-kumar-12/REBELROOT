@@ -38,7 +38,7 @@ export function ContactContent() {
             Let&rsquo;s start a conversation
           </h1>
           <p className="mt-5 max-w-md text-base leading-relaxed text-ink-muted">
-           Connect with the RebelRoot team for technical support, collaboration opportunities, security concerns, and open-source contributions.
+           Connect with the NovaRoot team for technical support, collaboration opportunities, security concerns, and open-source contributions.
           </p>
 
           <div className="mt-10 space-y-5">

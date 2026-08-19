@@ -40,7 +40,7 @@ export function SupportContent() {
 
       <section className="section-pad pb-16 pt-40 lg:pt-48">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
-          <Eyebrow>Support RebelRoot</Eyebrow>
+          <Eyebrow>Support NovaRoot</Eyebrow>
 
           <motion.h1
             variants={fadeUp}
@@ -48,7 +48,7 @@ export function SupportContent() {
             animate="visible"
             className="mt-6 text-4xl font-medium leading-[1.08] text-ink sm:text-5xl lg:text-6xl"
           >
-            Support & Feedback | RebelRoot
+            Support & Feedback | NovaRoot
           </motion.h1>
 
           <motion.p
@@ -58,7 +58,7 @@ export function SupportContent() {
             transition={{ delay: 0.1 }}
             className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-muted sm:text-xl"
           >
-            Support the RebelRoot open-source collective via UPI or PayPal,
+            Support the NovaRoot open-source collective via UPI or PayPal,
             or submit direct product feedback to help keep our applications
             free and ad-free.
           </motion.p>
@@ -77,7 +77,7 @@ export function SupportContent() {
           <Eyebrow>Support the rebellion</Eyebrow>
 
           <h2 className="mt-6 text-3xl font-medium leading-tight text-ink sm:text-4xl lg:text-5xl">
-            Keep RebelRoot Independent
+            Keep NovaRoot Independent
           </h2>
 
           <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-ink-muted sm:text-lg">
@@ -402,7 +402,7 @@ export function SupportContent() {
                   href="https://www.paypal.com/ncp/payment/A867TKRQ8EKRE/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Support RebelRoot through PayPal"
+                  aria-label="Support NovaRoot through PayPal"
                   className="group mt-5 flex h-13 w-full items-center justify-center gap-2 rounded-lg border border-base-border text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-electric hover:text-electric"
                 >
                   SUPPORT VIA PAYPAL
@@ -447,7 +447,7 @@ export function SupportContent() {
                 href="https://github.com/REBEL-ROOT"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Support RebelRoot development on GitHub"
+                aria-label="Support NovaRoot development on GitHub"
                 className="group flex h-14 shrink-0 items-center justify-center gap-2 rounded-lg bg-green-400 px-7 text-sm font-semibold text-black transition-all duration-300  hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
                 
               >

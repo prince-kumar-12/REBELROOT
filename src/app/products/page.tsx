@@ -19,7 +19,7 @@ export default function ProductsPage() {
           A better way to build and use digital tools.
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
-          Explore RebelRoot's open-source product suite of privacy-preserving digital tools, including Omni Browser, MOCNovel, CampCart, Openved, and RootLock.
+          Explore NovaRoot's open-source product suite of privacy-preserving digital tools, including Omni Browser, MOCNovel, CampCart, Openved, and RootLock.
         </p>
 
         <div className="mt-12">

@@ -19,7 +19,7 @@ const timeline = [
     year: "2023",
     title: "A bigger vision",
     description:
-      "The work evolved into RebelRoot, laying the foundation for a broader ecosystem of independent digital products.",
+      "The work evolved into NovaRoot, laying the foundation for a broader ecosystem of independent digital products.",
   },
   {
     year: "2024",
@@ -37,7 +37,7 @@ const timeline = [
     year: "2026",
     title: "Building what comes next",
     description:
-      "With multiple products in development, RebelRoot continues turning ideas into practical software — one project at a time.",
+      "With multiple products in development, NovaRoot continues turning ideas into practical software — one project at a time.",
   },
 ];
 
@@ -69,14 +69,14 @@ export function AboutContent() {
     <>
       <section className="section-pad pb-16 pt-40 lg:pt-48">
         <div className="mx-auto max-w-4xl">
-          <Eyebrow>About RebelRoot</Eyebrow>
+          <Eyebrow>About NovaRoot</Eyebrow>
           <motion.h1
             variants={fadeUp}
             initial="hidden"
             animate="visible"
             className="mt-6 text-4xl font-medium leading-[1.08] text-ink sm:text-5xl lg:text-6xl"
           >
-            About RebelRoot (Rebel Root) | Privacy-First Digital Collective
+            About NovaRoot | Privacy-First Digital Collective
           </motion.h1>
         </div>
       </section>
@@ -151,9 +151,9 @@ export function AboutContent() {
 </div>
             <div>
               <p className="text-lg font-medium text-ink"> Paras Agarwal</p>
-              <p className="text-sm text-electric-soft">Founder, RebelRoot</p>
+              <p className="text-sm text-electric-soft">Founder, NovaRoot</p>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
-                Paras Agarwal founded RebelRoot to establish an ecosystem of digital tools that prioritize the user above all else. As an open-source advocate and developer, he believes that software should serve its users honestly, transparently, and securely without hiding backdoors or profit-driven analytics trackers. He coordinates the development of flagship products like Omni Browser and MOCNovel, pushing for a future built on sovereign code.
+                Paras Agarwal founded NovaRoot to establish an ecosystem of digital tools that prioritize the user above all else. As an open-source advocate and developer, he believes that software should serve its users honestly, transparently, and securely without hiding backdoors or profit-driven analytics trackers. He coordinates the development of flagship products like Omni Browser and MOCNovel, pushing for a future built on sovereign code.
               </p><br />
                <Button href="https://github.com/ParasxAgarwal" target="_blank" size="sm" className="bg-green-400">
                             FOLLOW ON GITHUB 
@@ -190,7 +190,7 @@ export function AboutContent() {
 
       <section className="section-pad py-16 pb-28">
         <div className="mx-auto max-w-6xl">
-          <SectionHeading eyebrow="Our Mindset & Philosophy" title="Empowering Digital Sovereignty" description="RebelRoot is an independent, developer-led collective born out of a simple conviction: your data belongs to you. In an era of unchecked tracking, intrusive advertising, and centralized corporate data storage, we stand for digital sovereignty. We build tools that respect your privacy, work offline-first, and run entirely under your own control." />
+          <SectionHeading eyebrow="Our Mindset & Philosophy" title="Empowering Digital Sovereignty" description="NovaRoot is an independent, developer-led collective born out of a simple conviction: your data belongs to you. In an era of unchecked tracking, intrusive advertising, and centralized corporate data storage, we stand for digital sovereignty. We build tools that respect your privacy, work offline-first, and run entirely under your own control." />
           <motion.div
             variants={staggerContainer(0.1)}
             initial="hidden"

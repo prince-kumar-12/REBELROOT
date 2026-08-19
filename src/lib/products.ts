@@ -226,7 +226,7 @@ export const products: Product[] = [
         question:
           "Is Omni Browser completely free and open-source?",
         answer:
-          "Yes, Omni Browser is released under the GPLv3 license by RebelRoot. There are no paywalls, hidden subscriptions, or user monetization scripts.",
+          "Yes, Omni Browser is released under the GPLv3 license by NovaRoot. There are no paywalls, hidden subscriptions, or user monetization scripts.",
       },
     ],
 

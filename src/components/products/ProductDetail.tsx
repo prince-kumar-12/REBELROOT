@@ -26,8 +26,8 @@ export function ProductDetail({ product }: { product: Product }) {
           HERO
       ========================================================= */}
 
-       {/* <Hero/> */}
-     
+      {product.slug === "omni-browser" && <Hero product={product} />}
+
       <section className="section-pad py-16">
         <div className="mx-auto max-w-6xl">
           <SectionHeading eyebrow="Interface" title="A closer look" />
