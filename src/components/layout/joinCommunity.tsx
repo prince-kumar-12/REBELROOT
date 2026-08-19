@@ -4,7 +4,7 @@ function joinCommunity() {
   return (
     <div className="mx-auto mt-14 max-w-5xl border-t pt-30 pb-40  space-y-10">
       <h1 className="mt-6 text-4xl text-center font-medium text-ink sm:text-5xl">
-        Join the NovaRoot Community. Let's Build Better Software Together.
+        Join the RebelRoot Community. Let's Build Better Software Together.
       </h1>
       <div className="mx-auto mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 max-w-5xl pt-10">
         <button className="w-full max-w-[320px] h-12 min-[565px]:w-80 min-[565px]:h-14 rounded-[7px] bg-green-400 text-[15px] uppercase tracking-[4px] text-white transition-[box-shadow] duration-500 shadow-[0_0_25px_rgba(74,222,128,1)] hover:shadow-[0_0_5px_rgba(74,222,128,1),0_0_25px_rgba(74,222,128,1),0_0_50px_rgba(74,222,128,1),0_0_100px_rgba(74,222,128,1)]">

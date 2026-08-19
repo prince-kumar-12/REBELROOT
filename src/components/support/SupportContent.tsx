@@ -40,7 +40,7 @@ export function SupportContent() {
 
       <section className="section-pad pb-16 pt-40 lg:pt-48">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
-          <Eyebrow>Support NovaRoot</Eyebrow>
+          <Eyebrow>Support RebelRoot</Eyebrow>
 
           <motion.h1
             variants={fadeUp}
@@ -48,7 +48,7 @@ export function SupportContent() {
             animate="visible"
             className="mt-6 text-4xl font-medium leading-[1.08] text-ink sm:text-5xl lg:text-6xl"
           >
-            Support & Feedback | NovaRoot
+            Support & Feedback | RebelRoot
           </motion.h1>
 
           <motion.p
@@ -58,7 +58,7 @@ export function SupportContent() {
             transition={{ delay: 0.1 }}
             className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-muted sm:text-xl"
           >
-            Support the NovaRoot open-source collective via UPI or PayPal,
+            Support the RebelRoot open-source collective via UPI or PayPal,
             or submit direct product feedback to help keep our applications
             free and ad-free.
           </motion.p>
@@ -77,7 +77,7 @@ export function SupportContent() {
           <Eyebrow>Support the rebellion</Eyebrow>
 
           <h2 className="mt-6 text-3xl font-medium leading-tight text-ink sm:text-4xl lg:text-5xl">
-            Keep NovaRoot Independent
+            Keep RebelRoot Independent
           </h2>
 
           <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-ink-muted sm:text-lg">
