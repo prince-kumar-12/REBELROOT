@@ -82,7 +82,7 @@ export function Navbar() {
   
   <Image
     src="/rebelroot-logo-transparent.png"
-    alt="NovaRoot"
+    alt="RebelRoot"
     width={35}
     height={35}
   className="hidden dark:block"
@@ -91,7 +91,7 @@ export function Navbar() {
  
   <Image
     src="/rebelroot-logo-dark-transparent.png"
-    alt="NovaRoot"
+    alt="RebelRoot"
     width={35}
     height={35}
     className="block dark:hidden"
@@ -99,7 +99,7 @@ export function Navbar() {
 </span>
 </span>
           <span className="font-display text-sm font-semibold tracking-tight text-ink">
-            NOVAROOT
+           REBELROOT
           </span>
         </Link>
 
