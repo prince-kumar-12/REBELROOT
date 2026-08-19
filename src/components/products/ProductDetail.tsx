@@ -26,7 +26,7 @@ export function ProductDetail({ product }: { product: Product }) {
           HERO
       ========================================================= */}
 
-      {product.slug === "omni-browser" && <Hero product={product} />}
+      <Hero product={product} />
 
       <section className="section-pad py-16">
         <div className="mx-auto max-w-6xl">

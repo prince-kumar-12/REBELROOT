@@ -10,8 +10,13 @@ export const products: Product[] = [
     status: "Live",
     platforms: ["Desktop", "Mobile"],
     accent: "electric",
-    icon: "browser",
+    icon: "Globe",
     category: ["Web", "app"],
+    links: {
+      downloadUrl:
+        "https://play.google.com/store/apps/details?id=com.rebelroot.omni",
+      sourceUrl: "https://github.com/REBEL-ROOT/omni-browser/releases",
+    },
 
     heroCopy:
       "Every request Omni makes is a request you asked for. No background pings, no usage analytics, no silent handshakes with ad networks.",

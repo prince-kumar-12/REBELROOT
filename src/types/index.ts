@@ -41,6 +41,13 @@ export interface QuickToolItem {
   description: string;
   icon: "search" | "translate" | "note" | "capture";
 }
+export interface ProductLinks {
+  downloadUrl?: string;
+  downloadLabel?: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
+}
+
 export interface Product {
   name: string;
   slug: string;
@@ -58,6 +65,7 @@ export interface Product {
   architecture: string[];
   security: string[];
   faq: FAQItem[];
+  links?: ProductLinks;
 }
 export type ProductStatus = "Live" | "Beta" | "In Development";
 
