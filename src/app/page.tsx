@@ -8,7 +8,7 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import  Community  from "@/components/layout/joinCommunity";
 
 export const metadata: Metadata = {
-  title: "NovaRoot — Software Built for Sovereign Users",
+  title: "RebelRoot — Software Built for Sovereign Users",
   description:
     "An independent open-source collective building local-first, zero-telemetry, auditable software including Omni Browser, MOCNovel, CampCart, Openved, MOC Office, and RootLock.",
 };

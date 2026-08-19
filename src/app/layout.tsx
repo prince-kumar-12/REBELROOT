@@ -24,24 +24,24 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://novaroot.dev"),
+  metadataBase: new URL("https://rebelroot.dev"),
   title: {
-    default: "NovaRoot — Software Built for Sovereign Users",
-    template: "%s · NovaRoot",
+    default: "RebelRoot (Rebel Root) | Open-Source & Privacy-First Digital Tools",
+    template: "%s · RebelRoot",
   },
   description:
-    "NovaRoot is an independent open-source collective building local-first, zero-telemetry, auditable software.",
+    "RebelRoot is an independent open-source collective building local-first, zero-telemetry, auditable software.",
   openGraph: {
-    title: "NovaRoot — Software Built for Sovereign Users",
+    title: "RebelRoot — Open-Source & Privacy-First Digital Tools",
     description:
       "An independent open-source collective building local-first, zero-telemetry, auditable software.",
-    url: "https://novaroot.dev",
-    siteName: "NovaRoot",
+    url: "https://RebelRoot.dev",
+    siteName: "RebelRoot",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NovaRoot — Software Built for Sovereign Users",
+    title: "RebelRoot — Open-Source & Privacy-First Digital Tools",
     description:
       "An independent open-source collective building local-first, zero-telemetry, auditable software.",
   },
@@ -66,7 +66,7 @@ export default function RootLayout({
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none fixed inset-0 z-0 bg-nova-grid bg-[size:64px_64px] opacity-40 mask-fade-b"
+          className="pointer-events-none fixed inset-0 z-0 bg-nova-grid bg-size-[64px_64px] opacity-40 mask-fade-b"
         />
         <div className="relative z-10">
           <MotionProvider>
