@@ -143,11 +143,11 @@ export default function Hero({ product }: { product: Product }) {
                 >
                   {sourceLabel}
                 </Button>
-              ) : (
+              ) : product.showDocsButton ? (
                 <Button href="/docs" variant="secondary" iconPosition="left">
                   Read the docs
                 </Button>
-              )}
+              ) : null}
             </motion.div>
           </motion.div>
         </div>

@@ -120,7 +120,10 @@ export function ProductDetail({ product }: { product: Product }) {
           <SectionHeading
             eyebrow="Capabilities"
             title="Everything you need. Nothing you don't."
-            description="Built natively on GeckoView 145 with low-level Android performance and Firefox WebExtensions support."
+            description={
+              product.capabilitiesDescription ??
+              `Everything ${product.name} needs, purpose-built for how it's actually used.`
+            }
           />
 
           <motion.div
@@ -233,43 +236,45 @@ export function ProductDetail({ product }: { product: Product }) {
       viewport={defaultViewport}
     > 
 <SectionHeading
-            eyebrow="POWER UTILITIES"
-            title="16 Built-in Quick Tools."
+            eyebrow={product.powerUtilities?.eyebrow ?? "UTILITIES"}
+            title={product.powerUtilities?.title ?? "Built-in Tools"}
           />
-      <motion.h2
-        variants={fadeUp}
-        className="
-          mt-5
-          max-w-4xl
-          text-4xl
-          font-semibold
-          leading-[1.05]
-          tracking-tight
-          text-ink
-          sm:text-5xl
-          lg:text-6xl
-        "
-      >
-         
-        <span className="text-ink-muted">
-          Zero third-party apps needed.
-        </span>
-      </motion.h2>
+      {product.powerUtilities?.highlight && (
+        <motion.h2
+          variants={fadeUp}
+          className="
+            mt-5
+            max-w-4xl
+            text-4xl
+            font-semibold
+            leading-[1.05]
+            tracking-tight
+            text-ink
+            sm:text-5xl
+            lg:text-6xl
+          "
+        >
+          <span className="text-ink-muted">
+            {product.powerUtilities.highlight}
+          </span>
+        </motion.h2>
+      )}
 
-      <motion.p
-        variants={fadeUp}
-        className="
-          mt-6
-          max-w-2xl
-          text-base
-          leading-relaxed
-          text-ink-muted
-          sm:text-lg
-        "
-      >
-        Long-press &amp; drag to reorder your favorite browser
-        utilities in the bottom drawer.
-      </motion.p>
+      {product.powerUtilities?.description && (
+        <motion.p
+          variants={fadeUp}
+          className="
+            mt-6
+            max-w-2xl
+            text-base
+            leading-relaxed
+            text-ink-muted
+            sm:text-lg
+          "
+        >
+          {product.powerUtilities.description}
+        </motion.p>
+      )}
     </motion.div>
 
     {/* Tools */}
@@ -416,7 +421,140 @@ export function ProductDetail({ product }: { product: Product }) {
   </div>
 </section>
 
-<Benchmark/>
+{product.showBenchmark && <Benchmark/>}
+
+    {/* =========================================================
+        TECHNICAL SPECIFICATIONS
+    ========================================================= */}
+
+    {product.technicalSpecifications && (
+      <section className="section-pad py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading
+            align="center"
+            className="mx-auto max-w-2xl"
+            title={
+              product.technicalSpecifications.heading ??
+              "Technical Specifications"
+            }
+          />
+
+          <motion.div
+            variants={staggerContainer(0.1)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={defaultViewport}
+            className="
+              mt-12
+              grid
+              grid-cols-1
+              gap-6
+              lg:grid-cols-2
+            "
+          >
+            {product.technicalSpecifications.stacks.map((stack) => (
+              <motion.div
+                key={stack.title}
+                variants={fadeUp}
+                className="
+                  rounded-xl2
+                  border
+                  border-base-border
+                  bg-base-card/60
+                  p-6
+                  sm:p-8
+                "
+              >
+                <h3
+                  className="
+                    text-lg
+                    font-semibold
+                    tracking-tight
+                    text-ink
+                    sm:text-xl
+                  "
+                >
+                  {stack.title}
+                </h3>
+
+                <div className="mt-6 overflow-x-auto">
+                  <table className="w-full min-w-full border-collapse text-left">
+                    <thead>
+                      <tr className="border-b border-base-border">
+                        <th
+                          className="
+                            w-2/5
+                            pb-3
+                            pr-4
+                            font-mono
+                            text-xs
+                            font-medium
+                            uppercase
+                            tracking-wider
+                            text-ink-faint
+                          "
+                        >
+                          Component
+                        </th>
+                        <th
+                          className="
+                            pb-3
+                            font-mono
+                            text-xs
+                            font-medium
+                            uppercase
+                            tracking-wider
+                            text-ink-faint
+                          "
+                        >
+                          Technology
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {stack.rows.map((row) => (
+                        <tr
+                          key={row.component}
+                          className="
+                            border-b
+                            border-base-border/60
+                            last:border-b-0
+                          "
+                        >
+                          <td
+                            className="
+                              py-3.5
+                              pr-4
+                              align-top
+                              text-sm
+                              font-medium
+                              text-ink
+                            "
+                          >
+                            {row.component}
+                          </td>
+                          <td
+                            className="
+                              py-3.5
+                              align-top
+                              text-sm
+                              leading-relaxed
+                              text-ink-muted
+                            "
+                          >
+                            {row.technology}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    )}
 
     {/* Architecture */}
       <section className="section-pad py-16">

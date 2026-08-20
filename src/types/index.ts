@@ -48,6 +48,28 @@ export interface ProductLinks {
   sourceLabel?: string;
 }
 
+export interface PowerUtilitiesCopy {
+  eyebrow?: string;
+  title: string;
+  highlight?: string;
+  description: string;
+}
+
+export interface TechSpecRow {
+  component: string;
+  technology: string;
+}
+
+export interface TechSpecStack {
+  title: string;
+  rows: TechSpecRow[];
+}
+
+export interface TechnicalSpecifications {
+  heading?: string;
+  stacks: TechSpecStack[];
+}
+
 export interface Product {
   name: string;
   slug: string;
@@ -66,6 +88,17 @@ export interface Product {
   security: string[];
   faq: FAQItem[];
   links?: ProductLinks;
+
+  // ---- Product-specific section configuration ----
+  // Optional per-product overrides so shared sections (Capabilities,
+  // Power Utilities, Benchmark, docs CTA, Technical Specifications)
+  // only render product-appropriate content instead of leaking
+  // Omni Browser-specific copy onto every product page.
+  capabilitiesDescription?: string;
+  powerUtilities?: PowerUtilitiesCopy;
+  showBenchmark?: boolean;
+  showDocsButton?: boolean;
+  technicalSpecifications?: TechnicalSpecifications;
 }
 export type ProductStatus = "Live" | "Beta" | "In Development";
 
