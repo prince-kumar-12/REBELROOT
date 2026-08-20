@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef,useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Star } from "lucide-react";
+import { Menu, X} from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
@@ -24,9 +24,10 @@ const links = [
 
 export function Navbar() {
   const pathname = usePathname();
-  const isProductDetailPage = pathname.startsWith("/products/");
+  const isProductDetailPage = pathname.startsWith("/products/omni-browser");
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const [stars, setStars] = useState<number | null>(null);
 
   useEffect(() => {
@@ -56,6 +57,25 @@ export function Navbar() {
 
   getStars();
 }, [isProductDetailPage]);
+
+
+  useEffect(() => {
+  if (!open) return;
+
+  const handleOutsideClick = (event: MouseEvent) => {
+    const target = event.target as Node;
+
+    if (menuRef.current && !menuRef.current.contains(target)) {
+      setOpen(false);
+    }
+  };
+
+  document.addEventListener("mousedown", handleOutsideClick);
+
+  return () => {
+    document.removeEventListener("mousedown", handleOutsideClick);
+  };
+}, [open]);
 
   useEffect(() => {
     setOpen(false);
@@ -155,19 +175,25 @@ export function Navbar() {
           </Button>
         </div>
 
-        <button
-          type="button"
-          className="flex h-9 w-9 items-center justify-center rounded-full text-ink lg:hidden"
-          onClick={() => setOpen((o) => !o)}
-        > 
-
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}{" "}
-        </button>
+  <button
+  type="button"
+  aria-label={open ? "Close menu" : "Open menu"}
+  className="relative z-50 flex h-9 w-9 items-center justify-center rounded-full text-ink lg:hidden"
+  onMouseEnter={() => setOpen(true)}
+  onClick={() => setOpen((o) => !o)}
+>
+  {open ? (
+    <X className="h-5 w-5" aria-hidden="true" />
+  ) : (
+    <Menu className="h-5 w-5" aria-hidden="true" />
+  )}
+</button>
       </motion.nav>
 
       <AnimatePresence>
         {open && (
           <motion.div
+           ref={menuRef}
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
@@ -193,8 +219,7 @@ export function Navbar() {
                 size="sm"
                 className="bg-black text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-colors duration-300"
               >
-                {" "}
-                Support Open Source{" "}
+                Support Open Source 
               </Button>
             </div>
           </motion.div>

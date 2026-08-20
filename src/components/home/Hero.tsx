@@ -57,10 +57,10 @@ function OrbitIllustration() {
       initial={{ opacity: 0, scale: 0.92 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: NOVA_EASE, delay: 0.2 }}
-      className="relative mx-auto aspect-square w-full max-w-md"
+      className="relative mx-auto aspect-square w-full  max-w-md hidden min-[1020px]:block"
       aria-hidden="true"
     >
-      <div className="absolute inset-0 rounded-full bg-nova-radial blur-2xl" />
+      <div className="absolute inset-0 rounded-full bg-nova-radial  blur-2xl" />
 
       <svg viewBox="0 0 400 400" className="relative h-full w-full" fill="none">
         <defs>

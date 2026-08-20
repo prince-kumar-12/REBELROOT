@@ -30,7 +30,9 @@ export function ProductDetail({ product }: { product: Product }) {
 
       <section className="section-pad py-16">
         <div className="mx-auto max-w-6xl">
-          <SectionHeading eyebrow="Interface" title="A closer look" />
+         {product.slug !== "mocnovel" && (
+  <SectionHeading eyebrow="Interface" title="A closer look" />
+)}
 
           <motion.div
             variants={staggerContainer(0.1)}

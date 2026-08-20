@@ -208,8 +208,7 @@ export const products: Product[] = [
     faq: [
       {
         id: "omni-browser-difference",
-        question:
-          "What makes Omni Browser different from Chrome or Brave?",
+        question: "What makes Omni Browser different from Chrome or Brave?",
         answer:
           "Omni Browser is built on Mozilla GeckoView rather than Chromium, providing true independence from Google's web rendering monolithic standards. It features desktop Firefox WebExtension compatibility, Tor Proxy Hub, built-in uBlock ad & AI script blocking, native media sniffer tools, AES-256 hardware vaults, Manga Grabber, Incognito Shield, and 16+ built-in quick tools.",
       },
@@ -228,8 +227,7 @@ export const products: Product[] = [
       },
       {
         id: "omni-browser-open-source",
-        question:
-          "Is Omni Browser completely free and open-source?",
+        question: "Is Omni Browser completely free and open-source?",
         answer:
           "Yes, Omni Browser is released under the GPLv3 license by NovaRoot. There are no paywalls, hidden subscriptions, or user monetization scripts.",
       },
@@ -320,102 +318,78 @@ export const products: Product[] = [
   {
     slug: "mocnovel",
     name: "MOCNovel",
-    info: "Read and Write Without Restrictive Borders",
+    info: "Re-imagining the Reading & Publishing Experience",
     description:
-      "MOCNovel brings independent authors and readers together in a modern, ad-free publishing ecosystem. Take full control of your digital library, customize your reader layout, and sync your reading state across all of your devices.",
+      " MOC Novel is a modern, zero-telemetry, zero-ad publishing platform designed to connect independent authors directly with their audience. Empowered by modern LLMs and real-time synchronization.",
     status: "Beta",
     platforms: ["Web", "Desktop"],
     accent: "violet",
     icon: "BookOpen",
     category: ["Web"],
+    links: {
+      downloadUrl: " https://mocnovel.com/login",
+    },
 
     heroCopy:
       "MOCNovel treats your reading history as yours. Progress is stored on your device first, synced only if you choose to.",
 
     features: [
       {
-        icon: "Folder",
-        title: "Offline-first library",
+        icon: "Bot",
+        title: "AI Recommendation System",
         description:
-          "Every book you open is cached locally, readable without a connection.",
+          "Smart AI Assistance: Analyzes your library context, chats naturally for novel discovery, uses Groq-powered Llama 3.3 70B for fast responses, and delivers context-aware recommendations based on your favorite tropes and reading patterns.",
       },
       {
-        icon: "Folder",
-        title: "Typography controls",
+        icon: "BookOpen",
+        title: "Discovery & Management",
         description:
-          "Adjust measure, leading, and type scale independently — tuned per book, not per app default.",
+          "Advanced Filtering: Search by precise rating ranges, tags, update status, and genres; Curated Collections: Organize custom public or private lists with seamless drag-and-drop; Progress Tracking: Automatically track chapter-level reading progress; Offline Bookmark Vault: Save persistent notes on your favorite novels directly to browser memory.",
       },
       {
-        icon: "Folder",
-        title: "No reading telemetry",
+        icon: "MessagesSquare",
+        title: "Real-Time Social Features",
         description:
-          "We don't know what page you're on, how fast you read, or when you stopped.",
+          "Real-Time Social Features: Live WebSocket chat on chapter screens, threaded novel forums with Markdown support, rich profiles with reading stats and activity feeds, and dynamic sharing cards for spreading lists across social platforms.",
       },
       {
-        icon: "Folder",
-        title: "Local highlights & notes",
+        icon: "Layers",
+        title: "Modern Unified Architecture ",
         description:
-          "Annotations live in an exportable, plain-text-friendly format you control.",
+          "Modern Unified Architecture: A high-performance React 18 + Vite web client, lightweight SwiftUI iOS app with cached storage, high-throughput Fastify API backed by PostgreSQL, and secure global traffic routing through encrypted Nginx load balancing.",
       },
     ],
 
     quickTools: [
       {
-        icon: "ScanLine",
-        title: "QR Scanner",
+        icon: "Sparkles",
+        title: "AI-Driven Recommendation",
         description:
-          "Scan physical QR codes directly using camera hardware with instant URL opening.",
-        href: "/docs/omni-browser/quick-tools/qr-scanner",
+          "First web novel index utilizing conversational agent interactions to recommend user paths instead of cold metadata filters.",
+      
       },
       {
-        icon: "LockKeyhole",
-        title: "Safe Locker",
+        icon: "Zap",
+        title: " Sub-Second Loading",
         description:
-          "AES-256 encrypted hardware vault for private downloads, documents, and media.",
-        href: "/docs/omni-browser/quick-tools/safe-locker",
-      },
-      {
-        icon: "Languages",
-        title: "ML Translator",
-        description:
-          "Offline machine-learning language translation for full web pages without cloud tracking.",
-        href: "/docs/omni-browser/quick-tools/translator",
-      },
-      {
-        icon: "SquarePen",
-        title: "Edit Page",
-        description:
-          "Interactive design mode — edit text content, headers, and DOM elements live on any site.",
-        href: "/docs/omni-browser/quick-tools/edit-page",
-      },
-      {
-        icon: "Printer",
-        title: "Save PDF",
-        description:
-          "Convert active web pages into self-contained PDF documents for offline archiving.",
-        href: "/docs/omni-browser/quick-tools/save-pdf",
+          "Nginx gateway optimization, local cache caching, and optimized database indexing provide rapid response times under load.",
+        
       },
       {
         icon: "ShieldCheck",
-        title: "Tor Circuit Toggle",
+        title: "Secure Access & E2EE",
         description:
-          "One-tap switch to route active session traffic through multi-hop Tor onion relays.",
-        href: "/docs/omni-browser/quick-tools/tor-circuit",
+          "Strict JWT validation paired with end-to-end HTTPS encryption ensures reader and writer security is never compromised.",
+         
       },
       {
-        icon: "ExternalLink",
-        title: "Pin Web App",
+        icon: "Scaling",
+        title: "Horizontal Scaling",
         description:
-          "Pin progressive web applications (PWAs) directly to your mobile home screen.",
-        href: "/docs/omni-browser/quick-tools/pin-web-app",
+          "Ready to deploy across clusters using Docker Compose configs with built-in Redis Pub/Sub load balancing.",
+       
       },
-      {
-        icon: "CircleArrowDown",
-        title: "Auto-Scroll",
-        description:
-          "Hands-free smooth scrolling with adjustable speeds for continuous article reading.",
-        href: "/docs/omni-browser/quick-tools/auto-scroll",
-      },
+       
     ],
 
     architecture: [
@@ -433,42 +407,47 @@ export const products: Product[] = [
     faq: [
       {
         id: "mocnovel-account",
-        question: "Do I need an account?",
+        question: "What is MOCNovel (MOC Novel) by RebelRoot?",
         answer:
-          "No. MOCNovel works fully offline without an account. An account is only needed if you want to sync across devices.",
+          "MOCNovel (also called MOC Novel or Rebel Root MOCNovel) is a modern, zero-telemetry, ad-free novel publishing and reading platform built by the RebelRoot collective. It connects independent authors directly with readers without trackers, paywalls, or censorship.",
       },
       {
         id: "mocnovel-formats",
-        question: "What formats are supported?",
+        question: "Is MOCNovel free to read and publish?",
         answer:
-          "EPUB and plain-text formats are supported today, with PDF reading support in active development.",
+          "Yes, MOCNovel is a completely free platform for both readers and authors. There are no subscription fees, no advertisements, and no hidden paywalls.",
       },
       {
         id: "mocnovel-highlights",
-        question: "Is my highlight data portable?",
+        question: "What reading and publishing features does MOCNovel offer?",
         answer:
-          "Yes. All notes and highlights export to a plain markdown file you can move anywhere.",
+          "MOCNovel offers conversational AI-based book recommendations, real-time community tools, a markdown-based chapter editor for authors, and edge deployment for minimal latency worldwide.",
       },
     ],
 
     screenshots: [
       {
-        label: "Reading view",
-        image: "/founder.png",
+        label: "COMMUNITY",
+        image: "/MocNovel/community.png",
         description:
-          "A calibrated type system with adjustable measure and contrast.",
+          "A dedicated community feed where readers can discuss their favorite novels, share recommendations, post reviews, create tier lists, and discover what other readers are talking about.",
       },
       {
-        label: "Library shelf",
-        image: "/founder.png",
-        description:
-          "Offline-first library grid with local reading progress.",
+        label: "NOVEL DISCOVERY",
+        image: "/MocNovel/DISCOVERY.png",
+        description: "Discover a massive collection of web novels across genres and platforms. Search by title, author, or tags, browse genres, and find your next story to read.",
       },
       {
-        label: "Notes panel",
-        image: "/founder.png",
+        label: "CREATOR MARKETPLACE",
+        image: "/MocNovel/MARKETPLACE.png",
         description:
-          "Portable annotations stored alongside the book, not in a walled garden.",
+          "Connect with translators, cover artists, editors, narrators, and other creative professionals. Browse creator profiles, compare ratings and skills, and hire the right talent for your web novel.",
+      },
+      {
+        label: "TIER LISTS",
+        image: "/MocNovel/MARKETPLACE.png",
+        description:
+          "Create personalized tier lists and organize novels from S-tier favorites to lower rankings. Drag and drop stories into different tiers, then share your rankings with the community.",
       },
     ],
   },
@@ -476,15 +455,17 @@ export const products: Product[] = [
   {
     slug: "campcart",
     name: "CampCart",
-    info: "Trade Textbooks and Dorm Essentials Safely",
+    info: "The Safe, Trusted Campus Exchange Marketplace",
     description:
-      "CampCart is a decentralized peer-to-peer campus exchange marketplace built specifically for college students. Trade textbooks, electronics, and dorm gear safely inside a verified student-only network.",
+      "CampCart is a decentralized peer-to-peer marketplace built specifically for college and university students. Buy, sell, and rent textbooks, dorm gear, and campus essentials within a secure campus-only network.",
     status: "Beta",
     platforms: ["Web"],
     accent: "electric",
     icon: "ShoppingBag",
     category: ["Web"],
-
+    links: {
+      downloadUrl: "https://campcart.online",
+    },
     heroCopy:
       "CampCart gives independent merchants a checkout flow that doesn't quietly resell behavioral data to fund a free tier.",
 
@@ -1079,8 +1060,7 @@ export const products: Product[] = [
       {
         label: "Vault view",
         image: "/founder.png",
-        description:
-          "An organized vault with folders, tags, and quick search.",
+        description: "An organized vault with folders, tags, and quick search.",
       },
       {
         label: "CLI usage",
@@ -1102,11 +1082,6 @@ export const getProductBySlug = (slug: string): Product | undefined => {
   return products.find((product) => product.slug === slug);
 };
 
-export const statusFilters = [
-  "All",
-  "Live",
-  "Beta",
-  "In Development",
-] as const;
+export const statusFilters = ["All", "Live", "Beta", "In Development"] as const;
 
 export const platformFilters = ["Mobile", "Web"] as const;
