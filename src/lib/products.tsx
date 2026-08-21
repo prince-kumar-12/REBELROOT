@@ -1,4 +1,5 @@
 import { Product } from "@/types";
+import { Download } from "lucide-react";
 
 export const products: Product[] = [
   {
@@ -326,10 +327,76 @@ export const products: Product[] = [
     accent: "violet",
     icon: "BookOpen",
     category: ["Web"],
+    build:"Built For Global Scale",
     links: {
       downloadUrl: " https://mocnovel.com/login",
     },
-
+    stepsTitle:"The Unified Novel Lifecycle",
+    steps: [
+  {
+    number: "01",
+    title: "Discover",
+    description: (
+      <>
+        Explore lists & tags
+         
+      </>
+    ),
+  },
+  {
+    number: "02",
+    title: "Read",
+    description: (
+      <>
+        Custom, distraction-
+        <br />
+        free reader
+      </>
+    ),
+  },
+  {
+    number: "03",
+    title: "Discuss",
+    description: (
+      <>
+       Real-time community
+        <br />
+       chats
+      </>
+    ),
+  },
+  {
+    number: "04",
+    title: "AI Recs",
+    description: (
+      <>
+        Llama 3.3 70B
+        <br />
+        suggestions
+      </>
+    ),
+  },
+  {
+    number: "05",
+    title: "Library",
+    description: (
+      <>
+        Save & sync chapters
+      </>
+    ),
+  },
+  {
+    number: "06",
+    title: "Share",
+    description: (
+      <>
+        Curated lists with
+         
+        friends
+      </>
+    ),
+  },
+],
     heroCopy:
       "MOCNovel treats your reading history as yours. Progress is stored on your device first, synced only if you choose to.",
 
@@ -463,95 +530,125 @@ export const products: Product[] = [
     accent: "electric",
     icon: "ShoppingBag",
     category: ["Web"],
+    build:"Built For Zero Latency",
     links: {
       downloadUrl: "https://campcart.online",
     },
+    stepsTitle:"The CampCart Exchange Lifecycle",
+     steps: [
+  {
+    number: "01",
+    title: "Verify",
+    description: (
+      <>
+        Sign up with student
+        <br />
+       (.edu) email
+      </>
+    ),
+  },
+  {
+    number: "02",
+    title: "List",
+    description: (
+      <>
+        List gear with photos in 
+        <br />
+       seconds
+      </>
+    ),
+  },
+  {
+    number: "03",
+    title: "Chat",
+    description: (
+      <>
+        Negotiate via real-time
+        <br />
+       chat
+      </>
+    ),
+  },
+  {
+    number: "04",
+    title: "Pay",
+    description: (
+      <>
+        Secure escrow via
+        <br />
+       Stripe/Juspay
+      </>
+    ),
+  },
+  {
+    number: "05",
+    title: "Meet",
+    description: (
+      <>
+        Exchange at
+        <br />
+       designated safe zones
+      </>
+    ),
+  },
+],
     heroCopy:
       "CampCart gives independent merchants a checkout flow that doesn't quietly resell behavioral data to fund a free tier.",
 
     features: [
       {
-        icon: "Folder",
-        title: "Self-hostable storefront",
+        icon: "BadgeCheck",
+        title: "Verified Student Network",
         description:
-          "Deploy on your own infrastructure with a single Docker Compose file.",
+          "EDU Domain Check: Restricts accounts to verified college/university emails. Trust Seals: Profiles show verified student badges and ratings. Zero Spam: Prevents commercial sellers and outside scammers from listings. Campus Circles: Users can browse listings exclusively within their own campus.",
       },
       {
-        icon: "Folder",
-        title: "Privacy-respecting analytics",
+        icon: "WalletCards",
+        title: "Multi-Gateway Payments",
         description:
-          "Aggregate, cookieless traffic counts — never individual shopper profiles.",
+          "Stripe Integration: Supports global credit card billing and checkout. Juspay Hyper SDK: Supports UPI, Net Banking, and Indian wallets. Escrow Settlement: Funds are held securely until both parties confirm the exchange. Zero Hidden Fees: Free peer-to-peer cash transactions with low card processing rates.",
       },
       {
-        icon: "Folder",
-        title: "Composable checkout",
+        icon: "MessagesSquare",
+        title: "Real-Time Campus Chat",
         description:
-          "Bring your own payment processor through a documented adapter interface.",
+          "Instant Messaging: Live WebSockets chat for arranging pickups. Offer Router: Send, accept, or reject offers directly in chat. Push Alerts: Get notifications for offers and messages. Image Attachments: Privately share product photos and condition updates.",
       },
       {
-        icon: "Folder",
-        title: "Inventory sync",
+        icon: "MapPinned",
+        title: "Campus Safety Maps",
         description:
-          "Real-time stock updates over a lightweight Redis-backed event bus.",
+          "Safe Meeting Zones: Highlights campus lobbies, police stations, and libraries. Geolocation: Pinpoints meeting spots on interactive campus maps. Confirmation PIN: Secures and confirms exchanges with a 4-digit PIN. Safety Checklist: Reminds students of safety guidelines before meeting.",
       },
     ],
 
     quickTools: [
       {
-        icon: "ScanLine",
-        title: "QR Scanner",
+        icon: "Globe2",
+        title: " Edge Execution",
         description:
-          "Scan physical QR codes directly using camera hardware with instant URL opening.",
-        href: "/docs/omni-browser/quick-tools/qr-scanner",
-      },
-      {
-        icon: "LockKeyhole",
-        title: "Safe Locker",
-        description:
-          "AES-256 encrypted hardware vault for private downloads, documents, and media.",
-        href: "/docs/omni-browser/quick-tools/safe-locker",
-      },
-      {
-        icon: "Languages",
-        title: "ML Translator",
-        description:
-          "Offline machine-learning language translation for full web pages without cloud tracking.",
-        href: "/docs/omni-browser/quick-tools/translator",
-      },
-      {
-        icon: "SquarePen",
-        title: "Edit Page",
-        description:
-          "Interactive design mode — edit text content, headers, and DOM elements live on any site.",
-        href: "/docs/omni-browser/quick-tools/edit-page",
-      },
-      {
-        icon: "Printer",
-        title: "Save PDF",
-        description:
-          "Convert active web pages into self-contained PDF documents for offline archiving.",
-        href: "/docs/omni-browser/quick-tools/save-pdf",
+          "Deploying API handlers on Cloudflare Workers guarantees sub-10ms response times globally near students.",
       },
       {
         icon: "ShieldCheck",
-        title: "Tor Circuit Toggle",
+        title: " Secure Payments",
         description:
-          "One-tap switch to route active session traffic through multi-hop Tor onion relays.",
-        href: "/docs/omni-browser/quick-tools/tor-circuit",
+          "Built-in PCI compliance through Stripe Elements and Juspay SDK ensures payment numbers are never stored locally.",
+        
       },
       {
-        icon: "ExternalLink",
-        title: "Pin Web App",
+        icon: "Gauge",
+        title: "High Throughput",
         description:
-          "Pin progressive web applications (PWAs) directly to your mobile home screen.",
-        href: "/docs/omni-browser/quick-tools/pin-web-app",
+          "Chat routers operate on persistent Node.js WebSockets, handling thousands of simultaneous connections easily.",
+ 
       },
       {
-        icon: "CircleArrowDown",
-        title: "Auto-Scroll",
+        icon: "Scaling",
+        title: "Dynamic Scaling",
         description:
-          "Hands-free smooth scrolling with adjustable speeds for continuous article reading.",
-        href: "/docs/omni-browser/quick-tools/auto-scroll",
+          "MongoDB database handles read-heavy queries cleanly while cloud image resizing optimizes mobile data usage.",
+ 
       },
     ],
 
@@ -570,43 +667,32 @@ export const products: Product[] = [
     faq: [
       {
         id: "campcart-self-host",
-        question: "Can I self-host CampCart?",
+        question: "What is CampCart (Camp Cart) by RebelRoot?",
         answer:
-          "Yes, CampCart ships as a Docker Compose stack you can run on your own server or a cloud VM.",
+          "CampCart (also known as Camp Cart or RebelRoot CampCart) is a secure, peer-to-peer campus exchange marketplace built for college and university students by the RebelRoot collective. It enables students to buy, sell, and rent textbooks, dorm items, and campus essentials within a trusted campus-only network.",
       },
       {
         id: "campcart-payments",
-        question: "Which payment processors are supported?",
+        question: "Is CampCart free to use for students?",
         answer:
-          "CampCart ships with adapters for common processors and an open interface for adding others.",
+          "Yes, CampCart is 100% free for students to list and discover products. There are no listing fees or hidden charges for basic transactions.",
       },
       {
         id: "campcart-tracking",
-        question: "Does CampCart track shoppers?",
+        question: "How does CampCart ensure safe transactions on campus?",
         answer:
-          "No individual shopper tracking occurs. Store owners see aggregate, cookieless traffic trends only.",
+          "CampCart uses campus-verified identity gates, integrated Stripe/Juspay payment rails, peer review systems, and Cloudflare Workers for secure edge computing to ensure all transactions between students are safe and trustworthy.",
       },
     ],
 
     screenshots: [
       {
-        label: "Storefront",
-        image: "/founder.png",
+        label: "Camp-Homepage",
+        image: "/campCart/home.png",
         description:
           "A fast, server-rendered product grid with accessible filtering.",
       },
-      {
-        label: "Merchant dashboard",
-        image: "/founder.png",
-        description:
-          "Order and inventory management without third-party trackers embedded.",
-      },
-      {
-        label: "Checkout flow",
-        image: "/founder.png",
-        description:
-          "A minimal, three-step checkout with processor-hosted card fields.",
-      },
+      
     ],
   },
 
@@ -615,38 +701,116 @@ export const products: Product[] = [
     name: "Openved",
     info: "Vedic Wisdom Powered by Modern Edge AI",
     description:
-      "Openved combines the mathematical precision of astrological computations with the reasoning power of Google Gemini. Get personalized Kundli insights, 36-point compatibility checks, and transit readings on a secure, local-first interface.",
+      "Ved Astra (Openved) is a state-of-the-art Vedic astrology platform. By combining the absolute mathematical accuracy of the VedAstro engine with the cognitive power of Google Gemini, it delivers personalized Kundli analyses, 36-point compatibility matchmaking, and Lal Kitab ancestral debt readings.",
     status: "In Development",
     platforms: ["Mobile", "Web"],
     accent: "violet",
     icon: "HeartPulse",
     category: ["Mobile"],
-
+    build:"Built For Cosmic Scale",
+    links:{
+      downloadUrl:"https://openved.com/"
+  },
+  stepsTitle:"The Astrological Analysis Lifecycle",
+    steps: [
+  {
+    number: "01",
+    title: "Birth Input",
+    description: (
+      <>
+        Precise date, time, and
+        <br />
+        coordinates
+      </>
+    ),
+  },
+  {
+    number: "02",
+    title: "Ephemeris Sync",
+    description: (
+      <>
+        Calculate planetary
+        <br />
+        coordinates via
+         
+        VedAstro
+      </>
+    ),
+  },
+  {
+    number: "03",
+    title: "Chart Render",
+    description: (
+      <>
+        Draw D1 Kundli using
+        <br />
+        custom canvas
+      </>
+    ),
+  },
+  {
+    number: "04",
+    title: "Astrology Logic",
+    description: (
+      <>
+        Compute Ashtakoota,
+        <br />
+       Sade Sati, and Manglik
+        
+       status
+      </>
+    ),
+  },
+  {
+    number: "05",
+    title: "Gemini context",
+    description: (
+      <>
+       Inject Vedic wisdom
+        <br />
+        and Lal Kitab
+         
+        parameters
+      </>
+    ),
+  },
+  {
+    number: "06",
+    title: "AI Chat",
+    description: (
+      <>
+       Secure conversational
+        <br />
+         insights
+      </>
+    ),
+  },
+],
     heroCopy:
       "Openved stores health notes on-device by default, encrypted with a key only you hold — not a key we can recover.",
 
     features: [
       {
-        icon: "Folder",
-        title: "On-device encryption",
+        icon: "BadgeCheck",
+        title: "Verified Vedic Coordinates",
         description:
           "Entries are encrypted with a locally generated key before any storage write.",
       },
       {
-        icon: "Folder",
-        title: "Symptom timelines",
+        icon: "HeartHandshake",
+        title: "Ashtakoota Matchmaking",
         description:
           "Track patterns over time with a private, exportable timeline view.",
       },
       {
-        icon: "Folder",
-        title: "Doctor export packets",
+        icon: "Orbit,",
+        title: "Doshas & Transits Engine",
         description:
           "Generate a shareable summary PDF for appointments, created entirely offline.",
       },
       {
-        icon: "Folder",
-        title: "No insurer integrations",
+        icon: "BrainCircuit",
+        title: "On-Device AI Astrologer",
         description:
           "Openved has no data-sharing partnerships with insurers or employers, by policy and by architecture.",
       },
@@ -654,60 +818,31 @@ export const products: Product[] = [
 
     quickTools: [
       {
-        icon: "ScanLine",
-        title: "QR Scanner",
+        icon: "Gauge",
+        title: "Sub-Second Calculations",
         description:
-          "Scan physical QR codes directly using camera hardware with instant URL opening.",
-        href: "/docs/omni-browser/quick-tools/qr-scanner",
-      },
-      {
-        icon: "LockKeyhole",
-        title: "Safe Locker",
-        description:
-          "AES-256 encrypted hardware vault for private downloads, documents, and media.",
-        href: "/docs/omni-browser/quick-tools/safe-locker",
-      },
-      {
-        icon: "Languages",
-        title: "ML Translator",
-        description:
-          "Offline machine-learning language translation for full web pages without cloud tracking.",
-        href: "/docs/omni-browser/quick-tools/translator",
-      },
-      {
-        icon: "SquarePen",
-        title: "Edit Page",
-        description:
-          "Interactive design mode — edit text content, headers, and DOM elements live on any site.",
-        href: "/docs/omni-browser/quick-tools/edit-page",
-      },
-      {
-        icon: "Printer",
-        title: "Save PDF",
-        description:
-          "Convert active web pages into self-contained PDF documents for offline archiving.",
-        href: "/docs/omni-browser/quick-tools/save-pdf",
+          "Calculates full planetary positions and Ashtakoota metrics in milliseconds using cached ephemeris tables.",
+        
       },
       {
         icon: "ShieldCheck",
-        title: "Tor Circuit Toggle",
+        title: "Zero Data Retention",
         description:
-          "One-tap switch to route active session traffic through multi-hop Tor onion relays.",
-        href: "/docs/omni-browser/quick-tools/tor-circuit",
+          "Complete on-device focus: we do not store birth charts, queries, or chat history in backend databases.",
       },
       {
-        icon: "ExternalLink",
-        title: "Pin Web App",
+        icon: "BrainCircuit",
+        title: "Hybrid Intelligence",
         description:
-          "Pin progressive web applications (PWAs) directly to your mobile home screen.",
-        href: "/docs/omni-browser/quick-tools/pin-web-app",
+          "Merges the mathematical precision of astronomical coordinate models with neural language reasoning.",
+         
       },
       {
-        icon: "CircleArrowDown",
-        title: "Auto-Scroll",
+        icon: "Blocks",
+        title: " Modular Jetpack Compose",
         description:
-          "Hands-free smooth scrolling with adjustable speeds for continuous article reading.",
-        href: "/docs/omni-browser/quick-tools/auto-scroll",
+          "Android app utilizes clean architecture separates ui, data, and domain modules for rapid expansion.",
+        
       },
     ],
 
@@ -726,42 +861,48 @@ export const products: Product[] = [
     faq: [
       {
         id: "openved-availability",
-        question: "Is Openved available yet?",
+        question: "What is Openved (VedAstra / Ved Astra) by RebelRoot?",
         answer:
-          "Openved is in active development. A closed beta is planned before general availability.",
+          "Openved (also known as VedAstra, Ved Astra, or RebelRoot VedAstra) is a premium, privacy-first Vedic astrology platform developed by RebelRoot. It combines classical Kundli chart generation and Panchang calculation with Google Gemini AI reasoning for modern, intelligent Vedic guidance.",
       },
       {
         id: "openved-privacy",
-        question: "Who can see my entries?",
+        question: "What Vedic astrology features does Openved offer?",
         answer:
-          "Only you. Entries are encrypted on-device with a key that never leaves your device.",
+          "Openved supports full Kundli (birth chart) generation, Guna matchmaking, Panchang computation, Lal Kitab Rin analysis, Sade Sati transit tracking, Manglik Dosha evaluation, and AI-powered planetary remedies via Google Gemini.",
       },
       {
         id: "openved-export",
-        question: "Can I export my data?",
+        question: "Is Openved free to use?",
         answer:
-          "Yes, encrypted local export and a printable doctor summary are both planned for the beta release.",
+          "Yes, Openved is 100% free to use with zero advertisements. All astrological computations run on private servers — with zero cloud surveillance or data tracking.",
       },
     ],
 
     screenshots: [
       {
-        label: "Timeline",
-        image: "/founder.png",
+        label: "Home",
+        image: "/openved/home.png",
         description:
-          "A private symptom timeline rendered entirely from on-device data.",
+          "Discover your cosmic blueprint with Vedic astrology, AI-powered insights, Kundli generation, compatibility analysis, and personalized guidance.",
       },
       {
-        label: "Entry composer",
-        image: "/founder.png",
+        label: "My Kundli",
+        image: "/openved/kundli.png",
         description:
-          "Fast, structured entry logging designed for quick daily use.",
+          "Create your Janam Kundli using your birth details and explore planetary positions, Dashas, Yogas, Doshas, and personalized Vedic insights.",
       },
       {
-        label: "Export packet",
-        image: "/founder.png",
+        label: "Partner Milant",
+        image: "/openved/partner.png",
         description:
-          "An offline-generated summary suitable for printing before an appointment.",
+          "Compare two birth charts to understand relationship compatibility through traditional Ashtakoot Milan and Vedic matchmaking principles.",
+      },
+      {
+        label: "AI Sanctuary",
+        image: "/openved/ai.png",
+        description:
+          "Consult specialized AI astrologers for career, romance, relationships, timing, and other cosmic questions based on Vedic astrology.",
       },
     ],
   },
@@ -769,102 +910,149 @@ export const products: Product[] = [
   {
     slug: "moc-office",
     name: "MOC Office",
-    info: "The Private, Powerful Android PDF Suite",
+    info: "Your Documents. Your Device. Your Rules.",
     description:
-      "MOC Office is a feature-rich, 100% offline PDF reader and editing suite for Android. Powered by Mozilla's PDF.js, it delivers 12 professional-grade document tools — merge, split, compress, lock, convert — with zero tracking and zero cloud dependency.",
+      "MOC Office is a feature-rich, completely offline PDF reader and editing suite built for Android. Powered by Mozilla's PDF.js and iText Core, it delivers 12 professional-grade document tools with zero ads, zero tracking, and zero cloud dependency — all processed entirely on your device.",
     status: "Beta",
     platforms: ["Desktop", "Web"],
     accent: "electric",
     icon: "FileText",
     category: ["Web"],
+    build:"Why MOC Office",
+    links:{
+      downloadUrl:"https://github.com/rebelroot/MocOffice/releases",
+      sourceUrl:"https://github.com/rebelroot/MocOffice"
 
+    },
+    stepsTitle:"How MOC Office Works",
+     steps: [
+  {
+    number: "01",
+    title: "Open",
+    description: (
+      <>
+        Browse local
+        <br />
+        storage or recents
+      </>
+    ),
+  },
+  {
+    number: "02",
+    title: "Read",
+    description: (
+      <>
+        Scroll, zoom,
+        <br />
+        search & bookmark
+      </>
+    ),
+  },
+  {
+    number: "03",
+    title: "Select Tool",
+    description: (
+      <>
+        Pick from 12 built-in
+        <br />
+        PDF tools
+      </>
+    ),
+  },
+  {
+    number: "04",
+    title: "Process",
+    description: (
+      <>
+        100% on-device,
+        <br />
+        no upload
+      </>
+    ),
+  },
+  {
+    number: "05",
+    title: "Export",
+    description: (
+      <>
+        Save or share
+        <br />
+        instantly
+      </>
+    ),
+  },
+],
     heroCopy:
       "MOC Office renders and saves documents locally by default. Collaboration is opt-in, peer-to-peer, and end-to-end encrypted.",
 
     features: [
       {
-        icon: "Folder",
-        title: "Offline document engine",
+        icon: "BookOpen",
+        title: "Advanced PDF Viewer",
         description:
-          "Full editing works without a connection; sync is a layer on top, not a requirement.",
+          "Scroll Modes: Vertical continuous scroll and horizontal page-flip modes with snap-to-pages. Auto-Scroll: Hands-free reading with adjustable speed control. Full-Text Search: Instantly find phrases or keywords with highlighted results. Table of Contents: Navigate documents using outlines and bookmarks.",
       },
       {
-        icon: "Folder",
-        title: "Open file formats",
+        icon: "Wrench",
+        title: "12 Built-in PDF Tools",
         description:
-          "Documents save natively to ODF and Markdown, no proprietary lock-in format.",
+          "Merge & Split: Combine multiple PDFs or split pages individually. Compress: Optimize file size with quality presets. Rotate & Reorder: Rotate and drag-and-drop pages into order. Watermark & Page Numbers: Add customizable text/image watermarks and page numbering.",
       },
       {
-        icon: "Folder",
-        title: "Peer-to-peer collaboration",
+        icon: "ShieldCheck",
+        title: "Security & Privacy",
         description:
-          "Real-time co-editing over an encrypted WebRTC channel, no central document server.",
+          "Lock / Unlock PDFs: Encrypt documents with password protection using iText and Bouncy Castle. Remember Passwords: Securely store passwords and auto-fill them when reopened. 100% Offline: Run all tools entirely on-device with no cloud uploads. No Telemetry: Zero trackers, analytics, and ads for a fully auditable experience.",
       },
       {
-        icon: "Folder",
-        title: "Version history, locally",
+        icon: "Palette",
+        title: "Modern Android UX",
         description:
-          "Every save is a local, diffable snapshot you can roll back without a server.",
+          "Material You: Dynamic colors adapt to your Android 12+ wallpaper. AMOLED Black Theme: True-black mode optimized for OLED battery savings. Responsive Layouts: Optimized for phones, tablets, portrait, and landscape. Focal-Point Zoom: Double-tap to zoom at the tapped location with 1.1×–5× levels.",
+      },
+      {
+        icon: "RefreshCw",
+        title: "Image Conversion",
+        description:
+          "Document Tools: Convert one or multiple JPG/PNG images into clean, shareable PDF documents, export individual PDF pages as high-quality JPG or PNG images, easily remove or reorder pages without affecting the rest of the document, and view or download files embedded within PDF attachments.",
+      },
+      {
+        icon: "Zap",
+        title: "Architecture & Performance",
+        description:
+          "Architecture & Performance: Built with Clean MVVM architecture using Koin for dependency injection and lazy singleton scoping, Room for fast metadata queries, DataStore for secure encrypted preferences, Coil for memory-efficient thumbnail loading, and ProGuard/R8 for code shrinking and obfuscation to reduce release APK size.",
       },
     ],
 
     quickTools: [
       {
-        icon: "ScanLine",
-        title: "QR Scanner",
+        icon: "Wrench",
+        title: " 12 PDF Tools",
         description:
-          "Scan physical QR codes directly using camera hardware with instant URL opening.",
-        href: "/docs/omni-browser/quick-tools/qr-scanner",
+          "Merge, split, compress, rotate, reorder, watermark, lock, unlock, convert — all in one app, no internet required.",
+         
       },
       {
-        icon: "LockKeyhole",
-        title: "Safe Locker",
+        icon: "ShieldOff",
+        title: " Zero Tracking",
         description:
-          "AES-256 encrypted hardware vault for private downloads, documents, and media.",
-        href: "/docs/omni-browser/quick-tools/safe-locker",
+          "No analytics, no crash reporters, no ads. GPL-3.0 open-source so every line is auditable by anyone.",
+       
       },
       {
-        icon: "Languages",
-        title: "ML Translator",
+        icon: "Smartphone",
+        title: "Android 7+ Support",
         description:
-          "Offline machine-learning language translation for full web pages without cloud tracking.",
-        href: "/docs/omni-browser/quick-tools/translator",
+          "Targets Android API 24 through 36. Runs on phones and tablets, portrait and landscape, with fully responsive layouts.",
+        
       },
       {
-        icon: "SquarePen",
-        title: "Edit Page",
+        icon: "Moon",
+        title: "AMOLED Ready",
         description:
-          "Interactive design mode — edit text content, headers, and DOM elements live on any site.",
-        href: "/docs/omni-browser/quick-tools/edit-page",
+          "True-black AMOLED theme, Material You dynamic colors, and night/sepia reader modes for comfortable reading in any environment.",
       },
-      {
-        icon: "Printer",
-        title: "Save PDF",
-        description:
-          "Convert active web pages into self-contained PDF documents for offline archiving.",
-        href: "/docs/omni-browser/quick-tools/save-pdf",
-      },
-      {
-        icon: "ShieldCheck",
-        title: "Tor Circuit Toggle",
-        description:
-          "One-tap switch to route active session traffic through multi-hop Tor onion relays.",
-        href: "/docs/omni-browser/quick-tools/tor-circuit",
-      },
-      {
-        icon: "ExternalLink",
-        title: "Pin Web App",
-        description:
-          "Pin progressive web applications (PWAs) directly to your mobile home screen.",
-        href: "/docs/omni-browser/quick-tools/pin-web-app",
-      },
-      {
-        icon: "CircleArrowDown",
-        title: "Auto-Scroll",
-        description:
-          "Hands-free smooth scrolling with adjustable speeds for continuous article reading.",
-        href: "/docs/omni-browser/quick-tools/auto-scroll",
-      },
+        
     ],
 
     architecture: [
@@ -882,21 +1070,21 @@ export const products: Product[] = [
     faq: [
       {
         id: "moc-office-offline",
-        question: "Can I use MOC Office fully offline?",
+        question: "What is MOC Office (MOCOffice) by RebelRoot?",
         answer:
-          "Yes. Writing, spreadsheets, and slides all work offline by default, with sync as an optional add-on.",
+          "MOC Office (also known as MOCOffice or Rebel Root MOC Office) is a modern, privacy-first offline PDF reader and editor for Android developed by RebelRoot. It provides 12 built-in PDF tools — including merge, split, compress, watermark, and OCR — all processing 100% locally on your device without any trackers.",
       },
       {
         id: "moc-office-formats",
-        question: "What formats does it save to?",
+        question: "Does MOC Office require internet to process PDF files?",
         answer:
-          "MOC Office saves to open formats including ODF and Markdown, with import support for common proprietary formats.",
+          "No. MOC Office is 100% offline. All PDF operations including merge, split, compress, and OCR run entirely on your Android device without any internet connection or cloud processing.",
       },
       {
         id: "moc-office-collaboration",
-        question: "How does real-time collaboration work?",
+        question: "Is MOC Office free and open source?",
         answer:
-          "Collaboration connects peers directly over an encrypted channel rather than routing document content through a server.",
+          "Yes, MOC Office is completely free, ad-free, and open source. It uses PDF.js and Jetpack Compose built to Material Design 3 standards — without any third-party trackers or analytics.",
       },
     ],
 
@@ -925,14 +1113,75 @@ export const products: Product[] = [
   {
     slug: "rootlock",
     name: "RootLock",
-    info: "Hardware-Hardened Per-App Privacy Locker",
+    info: "Hardware-Hardened App Lock Engine",
     description:
-      "RootLock protects your personal and financial applications with separate, isolated credentials. Powered by an offline native C++ PBKDF2 cryptography core, it secures app launches against intrusions without exposing master secrets to memory or cloud storage.",
+      "RootLock protects your sensitive banking, message, and authentication applications with isolated credentials. Powered by an offline native C++ PBKDF2 cryptography engine, it verifies access credentials locally, keeping your master pins safely zeroed out of system memory.",
     status: "Live",
     platforms: ["Desktop", "Mobile", "CLI"],
     accent: "mixed",
     icon: "Lock",
     category: ["Live"],
+    links:{
+        downloadUrl:"https://github.com/rebelroot"
+    },
+    stepsTitle:"The Security Verification Cycle",
+    steps: [
+  {
+    number: "01",
+    title: "App Launch",
+    description: (
+      <>
+       Foreground service intercepts
+        
+       launch context
+         
+      </>
+    ),
+  },
+  {
+    number: "02",
+    title: "Prompt Overlay",
+    description: (
+      <>
+        Displays glassmorphic
+        <br />
+        credentials pad
+      </>
+    ),
+  },
+  {
+    number: "03",
+    title: "JNI Bridge",
+    description: (
+      <>
+     Kotlin transfers candidate keys
+        <br />
+       to C++ heap
+      </>
+    ),
+  },
+  {
+    number: "04",
+    title: "PBKDF2 Compute",
+    description: (
+      <>
+        Hardened cryptography verify
+       checks hash
+      </>
+    ),
+  },
+  {
+    number: "05",
+    title: "Memory Purge",
+    description: (
+      <>
+        Sensitive buffers are instantly
+        
+        zeroed and freed
+      </>
+    ),
+  },
+],
 
     heroCopy:
       "RootLock's server never sees a plaintext secret. Vaults are encrypted before they leave your device and stay that way at rest.",
@@ -1056,25 +1305,7 @@ export const products: Product[] = [
       },
     ],
 
-    screenshots: [
-      {
-        label: "Vault view",
-        image: "/founder.png",
-        description: "An organized vault with folders, tags, and quick search.",
-      },
-      {
-        label: "CLI usage",
-        image: "/founder.png",
-        description:
-          "Retrieve secrets in automated pipelines without exposing plaintext in logs.",
-      },
-      {
-        label: "Audit summary",
-        image: "/founder.png",
-        description:
-          "Public findings from RootLock's independent security audits.",
-      },
-    ],
+     
   },
 ];
 

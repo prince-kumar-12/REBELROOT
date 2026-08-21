@@ -114,7 +114,7 @@ export default function Hero({ product }: { product: Product }) {
                 </Button>
               ) : (
                 <Button
-                  href="/contact#support"
+                  href="#"
                   className="text-black! dark:text-white!"
                   icon={
                     <ArrowRight className="h-4 w-4 text-black dark:text-white" />

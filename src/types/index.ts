@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 export interface StoryChapter {
   id: string;
   index: number;
@@ -41,6 +43,7 @@ export interface QuickToolItem {
   description: string;
   icon: "search" | "translate" | "note" | "capture";
 }
+
 export interface ProductLinks {
   downloadUrl?: string;
   downloadLabel?: string;
@@ -70,6 +73,12 @@ export interface TechnicalSpecifications {
   stacks: TechSpecStack[];
 }
 
+export interface ProductSteps {
+  number: string;
+  title: string;
+  description: ReactNode;
+}
+
 export interface Product {
   name: string;
   slug: string;
@@ -77,10 +86,13 @@ export interface Product {
   accent: "electric" | "violet" | "mixed";
   status: ProductStatus;
   info: string;
+  build?: string;
+  steps?: ProductSteps[];
+  stepsTitle?:string;
   heroCopy: string;
   description: string;
   category: string[];
-  screenshots: ProductScreenshot[];
+  screenshots?: ProductScreenshot[];
   features: ProductFeature[];
   quickTools: ProductQuickTool[];
   platforms: string[];
@@ -89,17 +101,17 @@ export interface Product {
   faq: FAQItem[];
   links?: ProductLinks;
 
-  // ---- Product-specific section configuration ----
-  // Optional per-product overrides so shared sections (Capabilities,
-  // Power Utilities, Benchmark, docs CTA, Technical Specifications)
-  // only render product-appropriate content instead of leaking
-  // Omni Browser-specific copy onto every product page.
   capabilitiesDescription?: string;
+
   powerUtilities?: PowerUtilitiesCopy;
+
   showBenchmark?: boolean;
+
   showDocsButton?: boolean;
+
   technicalSpecifications?: TechnicalSpecifications;
 }
+
 export type ProductStatus = "Live" | "Beta" | "In Development";
 
 export interface ProductScreenshot {
