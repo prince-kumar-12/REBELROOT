@@ -402,7 +402,7 @@ export function SupportContent() {
                   href="https://www.paypal.com/ncp/payment/A867TKRQ8EKRE/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Support NovaRoot through PayPal"
+                  aria-label="Support RebelRoot through PayPal"
                   className="group mt-5 flex h-13 w-full items-center justify-center gap-2 rounded-lg border border-base-border text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-electric hover:text-electric"
                 >
                   SUPPORT VIA PAYPAL
@@ -447,7 +447,7 @@ export function SupportContent() {
                 href="https://github.com/REBEL-ROOT"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Support NovaRoot development on GitHub"
+                aria-label="Support RebelRoot development on GitHub"
                 className="group flex h-14 shrink-0 items-center justify-center gap-2 rounded-lg bg-green-400 px-7 text-sm font-semibold text-black transition-all duration-300  hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
                 
               >

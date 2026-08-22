@@ -49,33 +49,58 @@ export function ProductDetail({
       ========================================================= */}
 
       {steps.length > 0 && (
-        <section className="w-full bg-white px-6 py-20 dark:bg-[#08090b] sm:px-10 lg:px-16">
+        <section className="w-full overflow-x-hidden bg-white px-4 py-16 dark:bg-[#08090b] sm:px-6 sm:py-20 md:px-10 lg:px-16">
           <div className="mx-auto max-w-7xl">
-            <h2 className="text-center text-4xl font-bold tracking-[-0.04em] text-ink dark:text-white sm:text-5xl md:text-6xl lg:text-[64px]">
+            <h2 className="text-center text-3xl font-bold tracking-[-0.04em] text-ink dark:text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px]">
               {product.stepsTitle ?? `How ${product.name} Works`}
             </h2>
 
-            <div className="mt-16 flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-center md:gap-0">
+            <div
+              className="
+                mt-12
+                flex
+                flex-col
+                items-center
+                gap-8
+                sm:mt-14
+                sm:gap-10
+                md:flex-row
+                md:flex-wrap
+                md:items-start
+                md:justify-center
+                md:gap-x-4
+                md:gap-y-8
+                lg:gap-x-6
+                xl:gap-x-8
+              "
+            >
               {steps.map((step, index) => (
                 <div
                   key={step.number}
                   className="
                     flex
                     w-full
+                    max-w-xs
                     flex-col
                     items-center
+                    sm:max-w-sm
                     md:w-auto
+                    md:max-w-none
                     md:flex-row
+                    md:items-start
                   "
                 >
                   <div
                     className="
                       flex
-                      min-w-45
+                      w-full
                       flex-col
                       items-center
+                      wrap-break-words
                       text-center
-                      sm:min-w-47.5
+                      md:w-40
+                      lg:w-48
+                      xl:w-56
                     "
                   >
                     <span
@@ -120,14 +145,18 @@ export function ProductDetail({
                   {index < steps.length - 1 && (
                     <ArrowRight
                       className="
-                        my-4
+                        my-6
                         h-6
                         w-6
                         shrink-0
+                        rotate-90
                         text-[#55565a]
-                        md:mx-5
+                        sm:my-8
+                        md:mx-4
                         md:my-0
-                        lg:mx-7
+                        md:rotate-0
+                        lg:mx-6
+                        xl:mx-7
                       "
                       strokeWidth={2}
                     />
@@ -697,7 +726,7 @@ export function ProductDetail({
       {/* =========================================================
           ARCHITECTURE + SECURITY
       ========================================================= */}
-
+{/* 
       <section className="section-pad py-16">
         <div
           className="
@@ -814,7 +843,7 @@ export function ProductDetail({
             </ul>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* =========================================================
           FAQ
@@ -916,20 +945,22 @@ export function ProductDetail({
                 </Button>
               )}
           </div>
+          {product.slug === "omni-browser" &&(
 
-          <p className="mt-6 text-xs text-ink-faint">
-            Read the{" "}
+            <p className="mt-6 text-xs text-ink-faint">
+            Read the  
             <Link
               href={`/products/${product.slug}/privacy`}
               className="
-                underline
-                underline-offset-2
-                hover:text-ink-muted
+              underline
+              underline-offset-2
+              hover:text-ink-muted
               "
-            >
+              >
               {product.name} Privacy Policy
             </Link>
           </p>
+            )}
         </motion.div>
       </section>
     </div>

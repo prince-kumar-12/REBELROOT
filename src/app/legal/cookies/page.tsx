@@ -3,18 +3,18 @@ import { Eyebrow } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
   title: "Cookies Policy",
-  description: "The complete list of cookies novaroot.dev sets, and why.",
+  description: "The complete list of cookies rebelroot.dev sets, and why.",
 };
 
 const cookies = [
   {
-    name: "novaroot-theme",
+    name: "rebelroot-theme",
     purpose: "Remembers whether you prefer dark or light mode.",
     duration: "1 year",
     type: "Preference",
   },
   {
-    name: "novaroot-session",
+    name: "rebelroot-session",
     purpose: "Keeps the contact form working across a single visit.",
     duration: "Session only",
     type: "Essential",
@@ -32,7 +32,7 @@ export default function CookiesPage() {
         <p className="mt-4 text-sm text-ink-faint">Last updated August 2026</p>
 
         <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-muted">
-          novaroot.dev sets exactly two cookies, both listed below in full. We do
+          rebelroot.dev sets exactly two cookies, both listed below in full. We do
           not use third-party advertising, analytics, or cross-site tracking
           cookies anywhere on this site.
         </p>
@@ -73,7 +73,7 @@ export default function CookiesPage() {
           <div>
             <h2 className="text-xl font-medium text-ink">Product applications</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
-              Desktop and mobile NovaRoot products, like Omni Browser or RootLock,
+              Desktop and mobile RebelRoot products, like Omni Browser or RootLock,
               do not use browser cookies at all — they store local application
               data instead, described in each product's own privacy policy.
             </p>

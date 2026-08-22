@@ -20,7 +20,7 @@ export async function generateMetadata({
     title: product.name,
     description: product.description,
     openGraph: {
-      title: `${product.name} · NovaRoot`,
+      title: `${product.name} · RebelRoot`,
       description: product.description,
     },
   };

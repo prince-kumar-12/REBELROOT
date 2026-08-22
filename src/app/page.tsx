@@ -8,9 +8,9 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import  Community  from "@/components/layout/joinCommunity";
 
 export const metadata: Metadata = {
-  title: "RebelRoot — Software Built for Sovereign Users",
+  title: "RebelRoot (Rebel Root) | Open-Source &amp; Privacy-First Digital Tools",
   description:
-    "An independent open-source collective building local-first, zero-telemetry, auditable software including Omni Browser, MOCNovel, CampCart, Openved, MOC Office, and RootLock.",
+    "RebelRoot is an independent open-source collective designing secure, privacy-first digital tools like Omni Browser, MOCNovel, CampCart, and RootLock.",
 };
 
 export default function HomePage() {

@@ -230,7 +230,7 @@ export const products: Product[] = [
         id: "omni-browser-open-source",
         question: "Is Omni Browser completely free and open-source?",
         answer:
-          "Yes, Omni Browser is released under the GPLv3 license by NovaRoot. There are no paywalls, hidden subscriptions, or user monetization scripts.",
+          "Yes, Omni Browser is released under the GPLv3 license by RebelRoot. There are no paywalls, hidden subscriptions, or user monetization scripts.",
       },
     ],
 
@@ -853,7 +853,7 @@ export const products: Product[] = [
     ],
 
     security: [
-      "Zero-knowledge design: NovaRoot cannot read stored entries",
+      "Zero-knowledge design: RebelRoot cannot read stored entries",
       "Biometric lock on supported devices",
       "Independent cryptography review scheduled ahead of general availability",
     ],
@@ -1062,7 +1062,7 @@ export const products: Product[] = [
     ],
 
     security: [
-      "No document content ever transits a NovaRoot server",
+      "No document content ever transits a RebelRoot server",
       "Peer sync sessions use ephemeral, forward-secret encryption keys",
       "Open format specification reviewed by outside contributors",
     ],
@@ -1287,7 +1287,7 @@ export const products: Product[] = [
     faq: [
       {
         id: "rootlock-passwords",
-        question: "Can NovaRoot see my passwords?",
+        question: "Can RebelRoot see my passwords?",
         answer:
           "No. Vaults are encrypted on your device before syncing, and the server only ever stores encrypted data.",
       },

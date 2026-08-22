@@ -34,7 +34,7 @@ export function Footer() {
       ],
     },
     {
-      title: "NovaRoot",
+      title: "RebelRoot",
       links: [
         { label: "Privacy Policy", href: "/privacy" },
         { label: "Cookies Policy", href: "/legal/cookies" },
@@ -151,7 +151,7 @@ export function Footer() {
              
               <Image
                 src="/rebelroot-logo-dark-transparent.png"
-                alt="NovaRoot"
+                alt="RebelRoot"
                 width={70}
                 height={35}
                
@@ -161,7 +161,7 @@ export function Footer() {
              
           </div>
           <div className="text-left text-sm text-neutral-400 sm:text-right">
-            <p>© {new Date().getFullYear()} NovaRoot. All rights reserved. </p>
+            <p>© {new Date().getFullYear()} RebelRoot. All rights reserved. </p>
             <p className="mt-1 flex flex-wrap gap-2 sm:justify-end">
               <Link href="/terms" className="hover:text-neutral-600">
                 Terms

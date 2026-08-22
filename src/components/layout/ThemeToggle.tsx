@@ -7,7 +7,7 @@ export function ThemeToggle() {
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    const stored = localStorage.getItem("novaroot-theme");
+    const stored = localStorage.getItem("rebelroot-theme");
     const dark = stored ? stored === "dark" : true;
 
     setIsDark(dark);
@@ -19,7 +19,7 @@ export function ThemeToggle() {
 
     setIsDark(next);
     document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("novaroot-theme", next ? "dark" : "light");
+    localStorage.setItem("rebelroot-theme", next ? "dark" : "light");
   };
 
   return (

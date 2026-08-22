@@ -18,7 +18,7 @@ export function DocsContent() {
       <div className="mx-auto max-w-6xl">
         <Eyebrow>Documentation</Eyebrow>
         <h1 className="mt-6 max-w-2xl text-4xl font-medium leading-[1.08] text-ink sm:text-5xl">
-          Everything you need to build with NovaRoot.
+          Everything you need to build with RebelRoot.
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
           Full API references and per-product guides are being migrated to this
@@ -34,7 +34,7 @@ export function DocsContent() {
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink-muted transition-colors hover:bg-white/[0.04] hover:text-ink"
+                className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-ink-muted transition-colors hover:bg-white/4 hover:text-ink"
               >
                 <s.icon className="h-4 w-4" strokeWidth={1.75} />
                 {s.label}
@@ -59,7 +59,7 @@ export function DocsContent() {
               id="security"
               icon={ShieldAlert}
               title="Security disclosure"
-              body="Report vulnerabilities to security@novaroot.dev with a proof of concept where possible. We acknowledge reports within 24 hours and credit researchers in the public changelog once a fix ships, unless anonymity is requested."
+              body="Report vulnerabilities to security@rebelroot.dev with a proof of concept where possible. We acknowledge reports within 24 hours and credit researchers in the public changelog once a fix ships, unless anonymity is requested."
             />
             <DocSection
               id="changelog"

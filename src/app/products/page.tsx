@@ -7,7 +7,7 @@ import { Eyebrow } from "@/components/ui/Badge";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse every NovaRoot product: browsers, reading tools, commerce infrastructure, health journals, office software, and password management — all open source.",
+    "Browse every RebelRoot product: browsers, reading tools, commerce infrastructure, health journals, office software, and password management — all open source.",
 };
 
 export default function ProductsPage() {
@@ -19,7 +19,7 @@ export default function ProductsPage() {
           A better way to build and use digital tools.
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
-          Explore NovaRoot's open-source product suite of privacy-preserving digital tools, including Omni Browser, MOCNovel, CampCart, Openved, and RootLock.
+          Explore RebelRoot's open-source product suite of privacy-preserving digital tools, including Omni Browser, MOCNovel, CampCart, Openved, and RootLock.
         </p>
 
         <div className="mt-12">

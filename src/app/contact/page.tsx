@@ -4,7 +4,7 @@ import { ContactContent } from "@/components/contact/ContactContent";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Reach the NovaRoot collective for general inquiries, partnerships, or security disclosures.",
+    "Reach the RebelRoot collective for general inquiries, partnerships, or security disclosures.",
 };
 
 export default function ContactPage() {

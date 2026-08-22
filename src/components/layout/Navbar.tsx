@@ -94,7 +94,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2 pl-1.5"
-          aria-label="NovaRoot home"
+          aria-label="RebelRoot home"
         >
           <span className="relative flex h-7 w-7 items-center justify-center">
  
