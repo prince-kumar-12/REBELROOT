@@ -143,7 +143,7 @@ export default async function ProductPrivacyPage({
                 </p>
 
                 <div className="mt-6 overflow-x-auto rounded-xl border border-base-border">
-                  <table className="w-full min-w-[900px] border-collapse text-left text-sm">
+                  <table className="w-full min-w-225 border-collapse text-left text-sm">
                     <thead>
                       <tr className="bg-base-raised">
                         <th className="border border-base-border px-5 py-4 font-semibold text-ink">
@@ -428,6 +428,6 @@ function PolicySection({
         {children}
       </div>
     </section>
-    
+
   );
 }
