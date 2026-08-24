@@ -41,7 +41,7 @@ export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
             <button
               type="button"
               className="sidebar__heading"
-              aria-expanded={!isCollapsed}
+              // aria-expanded={!isCollapsed}
               onClick={() =>
                 setCollapsed((c) => ({ ...c, [section.title]: !c[section.title] }))
               }
