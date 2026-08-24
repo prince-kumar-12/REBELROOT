@@ -155,9 +155,9 @@ export function AboutContent() {
               <p className="mt-3 text-sm leading-relaxed text-ink-muted sm:text-base">
                 Paras Agarwal founded RebelRoot to establish an ecosystem of digital tools that prioritize the user above all else. As an open-source advocate and developer, he believes that software should serve its users honestly, transparently, and securely without hiding backdoors or profit-driven analytics trackers. He coordinates the development of flagship products like Omni Browser and MOCNovel, pushing for a future built on sovereign code.
               </p><br />
-               <Button href="https://github.com/ParasxAgarwal" target="_blank" size="sm" className="bg-green-400">
+               <Button href="https://github.com/ParasxAgarwal" target="_blank" size="sm" className="text-ink">
                             FOLLOW ON GITHUB 
-                            <ArrowRight size={18} color="white" />
+                            <ArrowRight size={18} className="text-ink" />
                          </Button>
             </div>
           </motion.div>

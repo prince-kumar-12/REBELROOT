@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -34,14 +34,17 @@ export function Hero() {
            We are a parent group of independent developers building high-quality, privacy-focused, and fully auditable applications to solve the root problems of digital sovereignty. Powering products like Omni Browser, MOCNovel, CampCart, Ved Astra, and MOC Office.
           </motion.p>
 
+
           <motion.div variants={fadeUp} className="mt-10 flex flex-wrap  gap-4">
-            <button className="w-full max-w-[320px] h-12 min-[565px]:w-80 min-[565px]:h-14 rounded-[7px] bg-green-400 text-[15px] uppercase tracking-[4px] text-white hover:shadow-[0_0_5px_rgba(74,222,128,1),0_0_25px_rgba(74,222,128,1),0_0_50px_rgba(74,222,128,1),0_0_100px_rgba(74,222,128,1)]">
-            {" "}
-            EXPLORE PRODUCTS 
-          </button>
-            <button className="w-full max-w-[320px] h-12 min-[565px]:w-50 min-[565px]:h-14 rounded-[7px] text-[15px] text-black dark:text-white dark:border-2 uppercase tracking-[4px]     transition-shadowz duration-500 shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),0px_30px_60px_-30px_rgba(0,0,0,0.3),inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]  hover:shadow-[0px_54px_55px_rgba(0,0,0,0.25),0px_-12px_30px_rgba(0,0,0,0.12),0px_4px_6px_rgba(0,0,0,0.12),0px_12px_13px_rgba(0,0,0,0.17),0px_-3px_5px_rgba(0,0,0,0.09)]">
-            OUR PRODUCT
-          </button>
+            
+            <Link  href="https://github.com/REBEL-ROOT" className="w-full max-w-[320px] flex items-center  justify-center  h-12 min-[565px]:w-80 min-[565px]:h-14 rounded-[7px] bg-green-400 text-[15px] uppercase tracking-[4px] text-white hover:shadow-[0_0_5px_rgba(74,222,128,1),0_0_25px_rgba(74,222,128,1),0_0_50px_rgba(74,222,128,1),0_0_100px_rgba(74,222,128,1)]">
+           SUPPORT ON GITHUB
+            
+          </Link>
+           
+            <Link href="/products"  className="w-full max-w-[320px] flex items-center justify-center h-12 min-[565px]:w-50 min-[565px]:h-14 rounded-[7px] text-[15px] text-black dark:text-white dark:border-2 uppercase tracking-[4px]     transition-shadowz duration-500 shadow-[0px_50px_100px_-20px_rgba(50,50,93,0.25),0px_30px_60px_-30px_rgba(0,0,0,0.3),inset_0px_-2px_6px_0px_rgba(10,37,64,0.35)]  hover:shadow-[0px_54px_55px_rgba(0,0,0,0.25),0px_-12px_30px_rgba(0,0,0,0.12),0px_4px_6px_rgba(0,0,0,0.12),0px_12px_13px_rgba(0,0,0,0.17),0px_-3px_5px_rgba(0,0,0,0.09)]">
+            OUR PRODUCTS 
+          </Link>
           </motion.div>
         </motion.div>
 

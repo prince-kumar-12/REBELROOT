@@ -39,7 +39,7 @@ export function ProductCard({
             accent.text
           )}
         >
-          <Icon className="h-5 w-5" strokeWidth={1.75} />
+          <Icon className="h-5 w-5 text-ink" strokeWidth={1.75} />
         </div>
 
         <StatusBadge status={product.status} />
@@ -49,7 +49,7 @@ export function ProductCard({
         {product.name}
       </h3>
 
-      <p className={cn("relative mt-1 text-sm font-medium", accent.text)}>
+      <p className={cn("relative mt-1 text-sm text-ink font-medium", accent.text)}>
         {product.info}
       </p>
 
