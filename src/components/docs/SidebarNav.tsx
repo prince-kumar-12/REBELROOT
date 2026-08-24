@@ -8,7 +8,11 @@ import { NAV } from "@/lib/docs/navigation";
 
 export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
-  const activePath = pathname?.startsWith("/docs/") ? pathname.slice("/docs/".length) : "";
+
+  const activePath = pathname?.startsWith("/docs/")
+    ? pathname.slice("/docs/".length)
+    : "";
+
   const [filter, setFilter] = useState("");
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
 
@@ -16,15 +20,23 @@ export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
 
   const groups = useMemo(() => {
     return NAV.map((section) => {
-      const items = section.items.filter((item) => !q || item.title.toLowerCase().includes(q));
-      return { ...section, items, anyMatch: items.length > 0 };
+      const items = section.items.filter(
+        (item) => !q || item.title.toLowerCase().includes(q)
+      );
+
+      return {
+        ...section,
+        items,
+        anyMatch: items.length > 0,
+      };
     });
   }, [q]);
 
   return (
     <>
       <div className="sidebar__filter">
-        <Search />
+        <Search aria-hidden="true" />
+
         <input
           type="search"
           placeholder="Filter…"
@@ -33,34 +45,55 @@ export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
           onChange={(e) => setFilter(e.target.value)}
         />
       </div>
+
       {groups.map((section) => {
-        const isCollapsed = !!collapsed[section.title] && !q;
-        if (q && !section.anyMatch) return null;
+        const isCollapsed = Boolean(collapsed[section.title]) && !q;
+
+        if (q && !section.anyMatch) {
+          return null;
+        }
+
         return (
-          <div key={section.title} className={`sidebar__group${isCollapsed ? " collapsed" : ""}`}>
+          <div
+            key={section.title}
+            className={`sidebar__group${
+              isCollapsed ? " collapsed" : ""
+            }`}
+          >
             <button
               type="button"
               className="sidebar__heading"
-              // aria-expanded={!isCollapsed}
-              onClick={() =>
-                setCollapsed((c) => ({ ...c, [section.title]: !c[section.title] }))
-              }
+              onClick={() => {
+                setCollapsed((current) => ({
+                  ...current,
+                  [section.title]: !current[section.title],
+                }));
+              }}
             >
               <span>{section.title}</span>
-              <span className="chev">
+
+              <span className="chev" aria-hidden="true">
                 <ChevronDown />
               </span>
             </button>
+
             <ul className="sidebar__links">
               {section.items.map((item) => (
                 <li key={item.path}>
                   <Link
                     href={`/docs/${item.path}`}
-                    className={`sidebar__link${item.path === activePath ? " active" : ""}`}
+                    className={`sidebar__link${
+                      item.path === activePath ? " active" : ""
+                    }`}
                     onClick={onNavigate}
                   >
                     <span>{item.title}</span>
-                    {item.badge && <span className="badge badge--muted">{item.badge}</span>}
+
+                    {item.badge && (
+                      <span className="badge badge--muted">
+                        {item.badge}
+                      </span>
+                    )}
                   </Link>
                 </li>
               ))}

@@ -11,59 +11,105 @@ interface CodeBlockProps {
   code: string;
 }
 
-export function CodeBlock({ lang, file, highlight, code }: CodeBlockProps) {
+export function CodeBlock({
+  lang,
+  file,
+  highlight,
+  code,
+}: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
-  const lines = highlightCode(code, lang, highlight);
+
+  const lines = highlightCode(
+    code,
+    lang,
+    highlight
+  );
 
   async function handleCopy() {
     try {
       await navigator.clipboard.writeText(code);
     } catch {
-      // Fallback for browsers without async clipboard support
-      const ta = document.createElement("textarea");
-      ta.value = code;
-      ta.style.position = "fixed";
-      ta.style.opacity = "0";
-      document.body.appendChild(ta);
-      ta.select();
+      const textarea = document.createElement("textarea");
+
+      textarea.value = code;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+
+      document.body.appendChild(textarea);
+
+      textarea.select();
+
       try {
         document.execCommand("copy");
       } catch {
-        /* noop */
+        // Ignore clipboard fallback errors.
       }
-      document.body.removeChild(ta);
+
+      document.body.removeChild(textarea);
     }
+
     setCopied(true);
-    setTimeout(() => setCopied(false), 1800);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 1800);
   }
 
   return (
     <div className="code-block">
       <div className="code-block__header">
-        <span className="code-block__dots">
+        <span
+          className="code-block__dots"
+          aria-hidden="true"
+        >
           <span />
           <span />
           <span />
         </span>
-        {file && <span className="code-block__file">{file}</span>}
-        <span className="code-block__lang">{lang}</span>
+
+        {file && (
+          <span className="code-block__file">
+            {file}
+          </span>
+        )}
+
+        <span className="code-block__lang">
+          {lang}
+        </span>
+
         <button
           type="button"
-          className={`code-block__copy${copied ? " copied" : ""}`}
+          className={`code-block__copy${
+            copied ? " copied" : ""
+          }`}
           onClick={handleCopy}
-          aria-label="Copy code"
+          aria-label={
+            copied
+              ? "Code copied"
+              : "Copy code"
+          }
         >
-          {copied ? <Check /> : <Copy />}
-          <span>{copied ? "Copied" : "Copy"}</span>
+          {copied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
+
+          <span>
+            {copied ? "Copied" : "Copy"}
+          </span>
         </button>
       </div>
+
       <div className="code-block__body">
         <pre>
-          {lines.map((line, i) => (
+          {lines.map((line, index) => (
             <span
-              key={i}
-              className={`code-line${line.highlighted ? " highlight" : ""}`}
-              dangerouslySetInnerHTML={{ __html: line.html }}
+              key={index}
+              className={`code-line${
+                line.highlighted
+                  ? " highlight"
+                  : ""
+              }`}
+              dangerouslySetInnerHTML={{
+                __html: line.html,
+              }}
             />
           ))}
         </pre>
