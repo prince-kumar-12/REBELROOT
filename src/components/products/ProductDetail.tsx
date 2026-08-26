@@ -253,6 +253,53 @@ export function ProductDetail({
                     >
                       {shot.description}
                     </p>
+                   {product.slug === "omni-browser" && (
+                     <div className="mt-auto pt-7 cursor-pointer">
+                      {shot.href ? (
+                        <Link
+                        href={shot.href}
+                        className="
+                        inline-flex
+                        items-center
+                        gap-1.5
+                        font-mono
+                        text-xs
+                        font-medium
+                        transition-colors
+                        hover:text-red-400
+                        "
+                        >
+                         View Documentation
+
+                          <ArrowRight
+                            className="
+                            h-3.5
+                            w-3.5
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1
+                            "
+                            />
+                        </Link>
+                      ) : (
+                        <span
+                        className="
+                        inline-flex
+                        items-center
+                        gap-1.5
+                        font-mono
+                        text-xs
+                        font-medium
+                        text-red-500
+                        "
+                        >
+                          Documentation
+
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </span>
+                      )}
+                    </div>
+                  )}
                   </div>
                 </motion.div>
               ))}

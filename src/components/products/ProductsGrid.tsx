@@ -66,7 +66,7 @@ export function ProductsGrid({
               type="button"
               onClick={() => setActive(filter)}
               className={cn(
-                "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
+                "relative ! rounded-full px-4 py-2 text-sm font-medium transition-colors",
                 active === filter
                   ? "text-red-700"
                   : "text-ink-muted hover:text-ink"
@@ -79,7 +79,7 @@ export function ProductsGrid({
                     duration: 0.35,
                     ease: NOVA_EASE,
                   }}
-                  className="absolute inset-0 rounded-full bg-linear-to-r from-electric to-violet"
+                  className="absolute inset-0 rounded-full !bg-green-400"
                 />
               )}
 

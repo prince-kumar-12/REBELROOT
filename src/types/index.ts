@@ -118,6 +118,7 @@ export interface ProductScreenshot {
   label: string;
   image: string;
   description: string;
+  href?:string;
 }
 
 export interface ProductFeature {

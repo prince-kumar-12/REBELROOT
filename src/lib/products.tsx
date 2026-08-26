@@ -85,112 +85,112 @@ export const products: Product[] = [
         title: "QR Scanner",
         description:
           "Scan physical QR codes directly using camera hardware with instant URL opening.",
-        href: "/docs/omni-browser/quick-tools/qr-scanner",
+        href: "/docs/tools/qr",
       },
       {
         icon: "LockKeyhole",
         title: "Safe Locker",
         description:
           "AES-256 encrypted hardware vault for private downloads, documents, and media.",
-        href: "/docs/omni-browser/quick-tools/safe-locker",
+        href: "/docs/privacy/private-vault",
       },
       {
         icon: "Languages",
         title: "ML Translator",
         description:
           "Offline machine-learning language translation for full web pages without cloud tracking.",
-        href: "/docs/omni-browser/quick-tools/translator",
+        href: "/docs/tools/translator.",
       },
       {
         icon: "SquarePen",
         title: "Edit Page",
         description:
           "Interactive design mode — edit text content, headers, and DOM elements live on any site.",
-        href: "/docs/omni-browser/quick-tools/edit-page",
+        href: "/docs/tools/overview",
       },
       {
         icon: "Printer",
         title: "Save PDF",
         description:
           "Convert active web pages into self-contained PDF documents for offline archiving.",
-        href: "/docs/omni-browser/quick-tools/save-pdf",
+        href: "/docs/tools/pdf",
       },
       {
         icon: "ShieldCheck",
         title: "Tor Circuit Toggle",
         description:
           "One-tap switch to route active session traffic through multi-hop Tor onion relays.",
-        href: "/docs/omni-browser/quick-tools/tor-circuit",
+        href: "/docs/privacy/tor",
       },
       {
         icon: "ExternalLink",
         title: "Pin Web App",
         description:
           "Pin progressive web applications (PWAs) directly to your mobile home screen.",
-        href: "/docs/omni-browser/quick-tools/pin-web-app",
+        href: "/docs/tools/web-apps",
       },
       {
         icon: "CircleArrowDown",
         title: "Auto-Scroll",
         description:
           "Hands-free smooth scrolling with adjustable speeds for continuous article reading.",
-        href: "/docs/omni-browser/quick-tools/auto-scroll",
+        href: "/docs/tools/overview",
       },
       {
         icon: "Scan",
         title: "QR Scan Page",
         description:
           "Scan and decode embedded QR code images on active web pages automatically.",
-        href: "/docs/omni-browser/quick-tools/qr-scan-page",
+        href: "/docs/tools/qr",
       },
       {
         icon: "Grid2X2",
         title: "QR Generator",
         description:
           "Generate custom high-resolution QR codes for web links or text snippets instantly.",
-        href: "/docs/omni-browser/quick-tools/qr-generator",
+        href: "/docs/tools/qr",
       },
       {
         icon: "Terminal",
         title: "Console Log",
         description:
           "Mobile web developer console — capture JavaScript exceptions, logs, and network events.",
-        href: "/docs/omni-browser/quick-tools/console-log",
+        href: "/docs/tools/dev-console",
       },
       {
         icon: "FileText",
         title: "Encrypted Dev Notes",
         description:
           "Encrypted local notebook for capturing web snippets, code blocks, and research notes.",
-        href: "/docs/omni-browser/quick-tools/dev-notes",
+        href: "/docs/tools/dev-notes",
       },
       {
         icon: "Droplet",
         title: "Site Style Injector",
         description:
           "Inject custom CSS styles, adjust layout spacing, and force custom dark mode color themes.",
-        href: "/docs/omni-browser/quick-tools/site-style-injector",
+        href: "/docs/tools/site-styles",
       },
       {
         icon: "Image",
         title: "Batch Image Grabber",
         description:
           "Batch extract all full-resolution images, galleries, and manga chapters from any page.",
-        href: "/docs/omni-browser/quick-tools/image-grabber",
+        href: "/docs/media/batch-manga",
       },
       {
         icon: "Code",
         title: "DOM Inspector",
         description:
           "Inspect HTML tree structure, CSS properties, asset paths, and element computed styles.",
-        href: "/docs/omni-browser/quick-tools/dom-inspector",
+        href: "/docs/tools/overview",
       },
       {
         icon: "ZoomIn",
         title: "Force Zoom",
         description:
           "Override non-scalable mobile viewports to enable pinch-to-zoom on restrictive websites.",
-        href: "/docs/omni-browser/quick-tools/force-zoom",
+        href: "/docs/customization/accessibility",
       },
     ],
 
@@ -240,78 +240,104 @@ export const products: Product[] = [
         image: "/omniBrowser/home.png",
         description:
           "Clean home dashboard with quick tiles, privacy metrics, built-in AI script blocker, and search bar.",
+        href: "/docs/home/home-screen",
+
       },
       {
         label: "You've Gone Incognito",
         image: "/omniBrowser/incognito_mode.png",
         description:
           "Private browsing mode with zero history, search tracking, or cookie retention.",
+        href: "/docs/privacy/private-vault",
+
       },
       {
         label: "Categorized News Feed",
         image: "/omniBrowser/news_feed.png",
         description:
           "Curated news categories for Business, World, Sports, and Entertainment.",
+        href: "/docs/home/discover",
+
       },
       {
         label: "Proxy Hub & Tor Circuit",
         image: "/omniBrowser/proxy_hub.png",
         description:
           "Multi-hop Tor routing, Snowflake bridges, WireGuard, and custom proxy configurations.",
+        href: "/docs/privacy/tor",
+
       },
       {
         label: "16+ Quick Power Tools",
         image: "/omniBrowser/quick_tools_updated.png",
         description:
           "Reorderable quick tools drawer with developer utilities, scanner, and styling tools.",
+        href: "/docs/tools/overview",
+
       },
       {
         label: "Share via QR Code",
         image: "/omniBrowser/qr_code_share.png",
         description:
           "Generate instant QR codes for web links or text snippets with one-tap saving.",
+        href: "/docs/tools/qr",
+
       },
       {
         label: "Real-time Privacy Report",
         image: "/omniBrowser/privacy_report.png",
         description:
           "Track blocked analytics domains, HTTPS upgrades, cookie isolation, and saved bandwidth.",
+        href: "/docs/privacy/overview",
+
       },
       {
         label: "Hardware Safe Locker",
         image: "/omniBrowser/safe_locker.png",
         description:
           "AES-256 biometric-protected hardware vault for private downloads and files.",
+        href: "/docs/privacy/private-vault",
+
       },
       {
         label: "Desktop WebExtensions",
         image: "/omniBrowser/extensions_menu.png",
         description:
           "Install Firefox .xpi add-ons like uBlock Origin and Dark Reader directly on mobile.",
+        href: "/docs/extensions/overview",
+
       },
       {
         label: "Batch Image & Manga Grabber",
         image: "/omniBrowser/manga_grabber.png",
         description:
           "Batch extract high-resolution image galleries and manga chapters in one click.",
+        href: "/docs/media/batch-manga",
+
       },
       {
         label: "Fullscreen Reader Mode",
         image: "/omniBrowser/manga_reader.png",
         description:
           "Distraction-free article and manga reading mode with customizable page rendering.",
+        href: "/docs/customization/accessibility",
+
       },
       {
         label: "Media Sniffer & Player",
         image: "/omniBrowser/native_player.png",
         description:
           "Extract video streams directly with hardware acceleration and background playback.",
+        href: "/docs/media/stream-sniffer",
+
       },
       {
         label: "Encrypted Local Notepad",
         image: "/omniBrowser/notepad_vault.png",
         description:
           "Capture notes and web snippets securely inside an encrypted local notebook.",
+        href: "/docs/tools/dev-notes",
+
       },
     ],
   },
