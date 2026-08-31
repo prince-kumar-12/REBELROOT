@@ -99,7 +99,7 @@ export function Navbar() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+    <header className="fixed inset-x-0 top-0 z-50 ">
       <motion.nav
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -108,7 +108,7 @@ export function Navbar() {
           ease: NOVA_EASE,
         }}
         className={cn(
-          "flex w-full max-w-6xl items-center justify-between rounded-full border border-base-border bg-base-card px-4 py-2.5 shadow-lg transition-all duration-300",
+          "flex w-full items-center justify-between border border-base-border bg-base-card px-5 py-4 shadow-lg transition-all duration-300",
           scrolled && "shadow-xl",
         )}
       >
@@ -283,7 +283,7 @@ export function Navbar() {
               <Button
                 href="/contact#support"
                 size="sm"
-                className="w-full !bg-green-400 !text-black hover:!bg-green-500"
+                className="w-full !bg-green-400  !text-black hover:!bg-green-500"
               >
                 Contribute
               </Button>

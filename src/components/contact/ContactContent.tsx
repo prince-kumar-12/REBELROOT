@@ -128,7 +128,7 @@ export function ContactContent() {
                   placeholder="Tell us what's on your mind..."
                 />
               </div>
-              <Button type="submit" className="w-full sm:w-auto text-ink " icon={<ArrowRight className="h-4 w-4" />}>
+              <Button type="submit" className="w-full sm:w-auto" icon={<ArrowRight className="h-4 w-4" />}>
                 Send message
               </Button>
             </form>

@@ -32,53 +32,75 @@ export default function CookiesPage() {
         <p className="mt-4 text-sm text-ink-faint">Last updated August 2026</p>
 
         <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-muted">
-          rebelroot.dev sets exactly two cookies, both listed below in full. We do
-          not use third-party advertising, analytics, or cross-site tracking
-          cookies anywhere on this site.
+           Read the official RebelRoot Cookies Policy. We use zero tracking or advertising cookies and rely only on local preferences for dark mode.
         </p>
 
-        <div className="mt-12 overflow-hidden rounded-xl2 border border-base-border">
-          <table className="w-full text-left text-sm">
-            <thead>
-              <tr className="border-b border-base-border bg-base-card/60 text-ink-faint">
-                <th className="px-5 py-3 font-medium">Name</th>
-                <th className="px-5 py-3 font-medium">Purpose</th>
-                <th className="px-5 py-3 font-medium">Duration</th>
-                <th className="px-5 py-3 font-medium">Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cookies.map((c) => (
-                <tr key={c.name} className="border-b border-base-border last:border-0">
-                  <td className="px-5 py-4 font-mono text-xs text-electric-soft">{c.name}</td>
-                  <td className="px-5 py-4 text-ink-muted">{c.purpose}</td>
-                  <td className="px-5 py-4 text-ink-muted">{c.duration}</td>
-                  <td className="px-5 py-4 text-ink-muted">{c.type}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
+      
         <div className="mt-12 space-y-8">
-          <div>
-            <h2 className="text-xl font-medium text-ink">Managing cookies</h2>
-            <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
-              Both cookies can be cleared through your browser's settings at any
-              time. Clearing the session cookie mid-form will require you to
-              re-enter your message; clearing the theme cookie simply resets the
-              site to dark mode.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-xl font-medium text-ink">Product applications</h2>
-            <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
-              Desktop and mobile RebelRoot products, like Omni Browser or RootLock,
-              do not use browser cookies at all — they store local application
-              data instead, described in each product's own privacy policy.
-            </p>
-          </div>
-        </div>
+  <div>
+    <h2 className="text-xl font-medium text-ink">
+      1. Do We Use Cookies?
+    </h2>
+
+    <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
+      <strong className="font-semibold text-ink">No.</strong> RebelRoot does
+      not write any tracking, advertising, profiling, or third-party cookies
+      on your device when you visit our website.
+    </p>
+  </div>
+
+  <div>
+    <h2 className="text-xl font-medium text-ink">
+      2. Essential Local State
+    </h2>
+
+    <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
+      We use the browser&apos;s standard{" "}
+      <strong className="font-semibold text-ink">localStorage</strong>{" "}
+      mechanisms strictly to store your active preferences. This includes:
+    </p>
+
+    <ul className="mt-5 space-y-2">
+      <li className="flex items-start gap-2 text-sm leading-relaxed text-ink-muted sm:text-base">
+        <span className="text-red-500">✓</span>
+        <span>
+          <strong className="font-semibold text-ink">
+            Theme Preference:
+          </strong>{" "}
+          Saving your selection of Light Mode or Dark Mode.
+        </span>
+      </li>
+
+      <li className="flex items-start gap-2 text-sm leading-relaxed text-ink-muted sm:text-base">
+        <span className="text-red-500">✓</span>
+        <span>
+          <strong className="font-semibold text-ink">
+            Newsletter States:
+          </strong>{" "}
+          Remembering if you have closed the newsletter drawer to avoid
+          bothering you again.
+        </span>
+      </li>
+    </ul>
+
+    <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
+      This data never leaves your browser and is not uploaded to any analytics
+      endpoint.
+    </p>
+  </div>
+
+  <div>
+    <h2 className="text-xl font-medium text-ink">
+      3. Third-Party Web Links
+    </h2>
+
+    <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">
+      Our site contains links to other independent platforms (e.g., GitHub,
+      Sponsor pages). These services have their own cookie policies once you
+      navigate to their domains.
+    </p>
+  </div>
+</div>
       </div>
     </section>
   );

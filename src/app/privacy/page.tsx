@@ -51,16 +51,89 @@ export default function PrivacyPage() {
           zero-telemetry and local-first architecture protects your personal
           data across all products.
         </p>
-        {sections.map((s) => (
-          <div key={s.title} className="border-base-border pt-8">
-            <h2 className="text-2xl font-medium text-center  text-ink">
-              {s.title}
-            </h2>
-            <p className="mt-4 text-sm text-center leading-relaxed text-ink-muted sm:text-base">
-              {s.body}
-            </p>
-          </div>
-        ))}
+       <div className="mx-auto mt-14 max-w-5xl border-t pt-10">
+  
+
+   
+
+  {/* 1 */}
+  <div className="mt-1">
+    <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+      1. Zero Telemetry &amp; Tracking
+    </h2>
+
+    <p className="mt-1 text-lg leading-relaxed text-ink-muted sm:text-xl">
+      None of our applications (including MOC OFFICE, Omni Browser, MOCNovel,
+      and CampCart) contain hidden analytics trackers, crash-reporting SDKs, or
+      background telemetry. We do not inspect, log, aggregate, or sell your
+      document contents, browsing history, read lists, search queries, or
+      transaction items.
+    </p>
+  </div>
+
+  {/* 2 */}
+  <div className="mt-1">
+    <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+      2. Local-First Storage &amp; Offline AI
+    </h2>
+
+    <p className="mt-1 text-lg leading-relaxed text-ink-muted sm:text-xl">
+      By default, all user data—such as documents, annotations, bookmarks,
+      reading history, shopping carts, and logs—is stored directly on your
+      physical device. For productivity tools like MOC OFFICE, document
+      manipulation, PDF conversions, and local AI summarization run completely
+      on-device without remote data ingestion.
+    </p>
+  </div>
+
+  {/* 3 */}
+  <div className="mt-1">
+    <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+      3. Optional End-to-End Encrypted Synchronization &amp; Cloud AI
+    </h2>
+
+    <p className="mt-1 text-lg leading-relaxed text-ink-muted sm:text-xl">
+      If you choose to use our synchronization features or user-initiated Cloud
+      AI capabilities, data is transmitted strictly per request using secure
+      HTTPS endpoints and encrypted with industry-standard cryptographic keys.
+      RebelRoot servers never inspect, store, or train models on your private
+      documents.
+    </p>
+  </div>
+
+  {/* 4 */}
+  <div className="mt-1">
+    <h2 className="text-xl font-semibold tracking-tight text-ink sm:text-2xl">
+      4. Open Source Verification &amp; Product-Specific Policies
+    </h2>
+
+    <p className="mt-1 text-lg leading-relaxed text-ink-muted sm:text-xl">
+      Since all of our codebases are open source under permissive licenses, you
+      can inspect the compile scripts, review network call configurations, and
+      verify these claims independently. For detailed permissions and data
+      safety disclosures per application, please refer to our product
+      policies:
+    </p>
+
+    <div className="mt-5 space-y-2">
+      <a
+        href="#"
+        className="flex items-center gap-2 text-base text-ink underline underline-offset-2 transition-colors hover:text-indigo-300 sm:text-lg"
+      >
+        <span className="text-red-500">✓</span>
+        MOC OFFICE Privacy Policy &amp; Data Safety
+      </a>
+
+      <a
+        href="#"
+        className="flex items-center gap-2 text-base text-ink underline underline-offset-2 transition-colors hover:text-purple-300 sm:text-lg"
+      >
+        <span className="text-red-500">✓</span>
+        Omni Browser Privacy Policy &amp; Data Safety
+      </a>
+    </div>
+  </div>
+</div>
       </div>
      <Community/>
     </section>

@@ -8,12 +8,14 @@ export default function NotFound() {
     <section className="section-pad flex min-h-[80vh] flex-col items-center pt-5 justify-center text-center">
       <Eyebrow>404</Eyebrow>
       <Image
-          src="/founder.png"
+          src="/notFound.png"
           alt="Error Page"
-          width={40}
-          height={40}
-          priority
-          className="h-full w-full object-cover"
+           width={1536}
+  height={1024}
+  priority
+  quality={100}
+    sizes="(max-width: 768px) 90vw, 850px"
+          className="h-auto max-w-[450px]  w-full object-contian"
         />
       <h1 className="mt-6 text-4xl font-medium text-ink sm:text-5xl">
         This page doesn&rsquo;t exist locally either.

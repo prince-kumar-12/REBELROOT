@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/Button";
 import Community from "@/components/layout/joinCommunity"
 import { fadeUp } from "@/lib/motion";
 import { Eyebrow } from "@/components/ui/Badge";
@@ -294,10 +295,10 @@ export function SupportContent() {
                   />
                 </div>
  
-                <button
+                <Button
                   type="submit"
                   aria-label="Submit feedback"
-                  className="group flex h-14 w-full items-center justify-center gap-2 rounded-lg bg-green-400 px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5   hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
+                  className="group flex h-14 w-full items-center justify-center gap-2 rounded-lg   px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5   hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
                 >
                   SUBMIT FEEDBACK
 
@@ -305,7 +306,7 @@ export function SupportContent() {
                     aria-hidden="true"
                     className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                   />
-                </button>
+                </Button>
               </form>
             </motion.div>
  
@@ -398,12 +399,13 @@ export function SupportContent() {
                   </div>
                 </div>
 
-                <a
+                <Button
                   href="https://www.paypal.com/ncp/payment/A867TKRQ8EKRE/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Support RebelRoot through PayPal"
-                  className="group mt-5 flex h-13 w-full items-center justify-center gap-2 rounded-lg border border-base-border text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-electric hover:text-electric"
+                  className="group flex h-14 w-full items-center my-10 justify-center gap-2 rounded-lg   px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5   hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
+                    
                 >
                   SUPPORT VIA PAYPAL
 
@@ -411,7 +413,7 @@ export function SupportContent() {
                     aria-hidden="true"
                     className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                   />
-                </a>
+                </Button>
               </motion.div>
             </div>
           </div>
@@ -443,12 +445,12 @@ export function SupportContent() {
                 </p>
               </div>
 
-              <a
+              <Button
                 href="https://github.com/REBEL-ROOT"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Support RebelRoot development on GitHub"
-                className="group flex h-14 shrink-0 items-center justify-center gap-2 rounded-lg bg-green-400 px-7 text-sm font-semibold text-black transition-all duration-300  hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
+                className="group flex h-14 shrink-0 items-center justify-center gap-2 rounded-lg px-7 text-sm font-semibold text-black transition-all duration-300  hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
                 
               >
                 SUPPORT ON GITHUB
@@ -457,7 +459,7 @@ export function SupportContent() {
                   aria-hidden="true"
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
                 />
-              </a>
+              </Button>
             </div>
           </motion.div>
         </div>

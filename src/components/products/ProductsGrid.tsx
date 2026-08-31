@@ -79,7 +79,7 @@ export function ProductsGrid({
                     duration: 0.35,
                     ease: NOVA_EASE,
                   }}
-                  className="absolute inset-0 rounded-full !bg-green-400"
+                  className="absolute inset-0 rounded-full  bg-purple-400"
                 />
               )}
 

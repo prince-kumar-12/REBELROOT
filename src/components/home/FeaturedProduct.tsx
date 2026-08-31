@@ -15,7 +15,7 @@ const features = [
 
 export function FeaturedProduct() {
   return (
-    <section className="relative section-pad py-24 lg:py-32">
+    <section className="relative section-pad">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div
           variants={slideInLeft}

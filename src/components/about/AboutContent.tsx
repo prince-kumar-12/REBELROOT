@@ -176,7 +176,7 @@ export function AboutContent() {
           >
             {timeline.map((entry) => (
               <motion.div key={entry.year} variants={fadeUp} className="relative">
-                <span className="absolute -left-9.25 top-1.5 h-2.5 w-2.5 rounded-full bg-linear-to-r from-electric to-violet" />
+                <span className="absolute -left-9.25 top-1.5 h-2.5 w-2.5 rounded-full bg-linear-to-r bg-electric" />
                 <p className="font-mono text-xs text-electric-soft">{entry.year}</p>
                 <h3 className="mt-1 text-lg font-medium text-ink">{entry.title}</h3>
                 <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-muted sm:text-base">
