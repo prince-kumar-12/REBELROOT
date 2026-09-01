@@ -8,32 +8,64 @@ import { Button } from "@/components/ui/Button";
 import Community from "@/components/layout/joinCommunity"
 import { fadeUp } from "@/lib/motion";
 import { Eyebrow } from "@/components/ui/Badge";
-
 export function SupportContent() {
+  
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
+    
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  event.preventDefault();
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const formData = new FormData(event.currentTarget);
 
-    const formData = new FormData(event.currentTarget);
+  const feedbackData = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    product: formData.get("product"),
+    rating: Number(formData.get("rating")),
+    message: formData.get("message"),
+  };
 
-    const feedbackData = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      product: formData.get("product"),
-      rating: Number(formData.get("rating")),
-      message: formData.get("message"),
-    };
+  try {
+    const response = await fetch("/api/feedback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(feedbackData),
+    });
 
-    console.log("Feedback submission:", feedbackData);
+    // First get the raw response
+    const responseText = await response.text();
 
-    alert("Thank you for your feedback!");
+    console.log("API status:", response.status);
+    console.log("API response:", responseText);
+
+    if (!response.ok) {
+      alert(responseText || "Failed to submit feedback.");
+      return;
+    }
+
+    let data;
+
+    try {
+      data = JSON.parse(responseText);
+    } catch {
+      console.error("API did not return valid JSON");
+      alert("Server returned an invalid response.");
+      return;
+    }
+
+    alert(data.message || "Thank you for your feedback!");
 
     event.currentTarget.reset();
     setRating(0);
     setHoverRating(0);
-  };
+  } catch (error) {
+    console.error("Feedback fetch failed:", error);
+    alert("Could not connect to the feedback server.");
+  }
+}
 
   return (
     <>

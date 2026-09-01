@@ -517,32 +517,6 @@ export const products: Product[] = [
           "MOCNovel offers conversational AI-based book recommendations, real-time community tools, a markdown-based chapter editor for authors, and edge deployment for minimal latency worldwide.",
       },
     ],
-
-    screenshots: [
-      {
-        label: "COMMUNITY",
-        image: "/MocNovel/community.png",
-        description:
-          "A dedicated community feed where readers can discuss their favorite novels, share recommendations, post reviews, create tier lists, and discover what other readers are talking about.",
-      },
-      {
-        label: "NOVEL DISCOVERY",
-        image: "/MocNovel/DISCOVERY.png",
-        description: "Discover a massive collection of web novels across genres and platforms. Search by title, author, or tags, browse genres, and find your next story to read.",
-      },
-      {
-        label: "CREATOR MARKETPLACE",
-        image: "/MocNovel/MARKETPLACE.png",
-        description:
-          "Connect with translators, cover artists, editors, narrators, and other creative professionals. Browse creator profiles, compare ratings and skills, and hire the right talent for your web novel.",
-      },
-      {
-        label: "TIER LISTS",
-        image: "/MocNovel/MARKETPLACE.png",
-        description:
-          "Create personalized tier lists and organize novels from S-tier favorites to lower rankings. Drag and drop stories into different tiers, then share your rankings with the community.",
-      },
-    ],
   },
 
   {
@@ -1114,6 +1088,38 @@ export const products: Product[] = [
       },
     ],
 
+    screenshots: [
+  {
+    label: "DOCUMENT READER",
+    image: "/MocOffice/reader.jpg",
+    description:
+      "A clean document reader dashboard for managing PDFs, Word files, Excel sheets, and presentations. Quickly search documents, browse recent or favorite files, and access your files from a unified workspace.",
+  },
+  {
+    label: "AI PROVIDER KEYS",
+    image: "/MocOffice/ai-provider-keys.jpg",
+    description:
+      "Configure multiple AI providers and their API keys in one place. Set active models for providers such as Gemini, Groq, and other supported services, with automatic fallback routing when a provider is unavailable.",
+  },
+  {
+    label: "PDF TOOLS",
+    image: "/MocOffice/pdf-tools.jpg",
+    description:
+      "A complete PDF toolkit for converting, organizing, and managing documents. Convert images and webpages to PDF, export PDF pages as images, merge and split files, reorder pages, rotate pages, and remove unwanted pages.",
+  },
+  {
+    label: "MOC WORKSPACE",
+    image: "/MocOffice/workspace.jpg",
+    description:
+      "An AI-powered document workspace where users can attach files and perform tasks such as summarization, PDF conversion, PDF-to-image conversion, and document report generation. Interact with the AI directly through a simple conversational interface.",
+  },
+  {
+    label: "AI MODEL MANAGER",
+    image: "/MocOffice/ai-model-manager.jpg",
+    description:
+      "Manage and download offline AI models based on your device's available resources. View system RAM, CPU capacity, storage, and hardware acceleration, then choose lightweight models optimized for tasks such as document processing, translation, and reasoning.",
+  },
+],
      
   },
 
