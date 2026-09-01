@@ -946,8 +946,8 @@ export const products: Product[] = [
     category: ["Web"],
     build:"Why MOC Office",
     links:{
-      downloadUrl:"https://github.com/rebelroot/MocOffice/releases",
-      sourceUrl:"https://github.com/rebelroot/MocOffice"
+      downloadUrl:"https://play.google.com/store/apps/details?id=com.rebelroot.mocoffice",
+      
 
     },
     stepsTitle:"How MOC Office Works",
@@ -1114,26 +1114,7 @@ export const products: Product[] = [
       },
     ],
 
-    screenshots: [
-      {
-        label: "Writer view",
-        image: "/founder.png",
-        description:
-          "A clean writing surface with a distraction-minimal toolbar.",
-      },
-      {
-        label: "Sheet module",
-        image: "/founder.png",
-        description:
-          "Spreadsheet editing with formula support and local version history.",
-      },
-      {
-        label: "Collaboration panel",
-        image: "/founder.png",
-        description:
-          "Peer-to-peer editing indicators with no central server in the loop.",
-      },
-    ],
+     
   },
 
   {

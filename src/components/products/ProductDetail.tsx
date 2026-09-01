@@ -959,33 +959,25 @@ export function ProductDetail({
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            {downloadUrl ? (
+            {downloadUrl && (
               <Button
                 href={downloadUrl}
                 target="_blank"
+
                 icon={
                   <ArrowRight className="h-4 w-4" />
                 }
-                className="text-ink"
+                 
               >
                 {downloadLabel}
               </Button>
-            ) : (
-              <Button
-                href="#"
-                icon={
-                  <ArrowRight className="h-4 w-4" />
-                }
-                className="text-ink"
-              >
-                Get started
-              </Button>
-            )}
+            ) }
 
             {product.slug === "omni-browser" &&
               product.showDocsButton !== false && (
                 <Button
                   href="/docs"
+                  target="_blank"
                   variant="secondary"
                 >
                   Read the docs

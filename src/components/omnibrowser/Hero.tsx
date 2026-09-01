@@ -101,28 +101,18 @@ export default function Hero({ product }: { product: Product }) {
               variants={fadeUp}
               className="mt-10 flex flex-wrap gap-4"
             >
-              {downloadUrl ? (
+              {downloadUrl && (
                 <Button
                   href={downloadUrl}
                   target="_blank"
-                  className="text-black! dark:text-white!"
+               
                   icon={
-                    <ArrowRight className="h-4 w-4 text-black dark:text-white" />
+                    <ArrowRight className="h-4 w-4 " />
                   }
                 >
                   {downloadLabel}
                 </Button>
-              ) : (
-                <Button
-                  href="#"
-                  className="text-black! dark:text-white!"
-                  icon={
-                    <ArrowRight className="h-4 w-4 text-black dark:text-white" />
-                  }
-                >
-                  Get {product.name}
-                </Button>
-              )}
+              )  }
 
               {sourceUrl ? (
                 <Button
