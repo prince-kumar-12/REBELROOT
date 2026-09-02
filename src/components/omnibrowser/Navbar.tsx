@@ -27,6 +27,8 @@ export default function Navbar() {
   const handleLinkClick = () => setIsOpen(false);
 
   return (
+
+    
     <header
       data-hero="navbar"
       className={`fixed inset-x-0 top-0 z-50 transition-transform duration-500 ease-cinematic will-change-transform ${

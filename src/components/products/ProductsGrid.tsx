@@ -128,7 +128,6 @@ export function ProductsGrid({
         </motion.div>
       </AnimatePresence>
 
-      {/* Empty state */}
       {filtered.length === 0 && (
         <p className="mt-16 text-center text-sm text-ink-muted">
           No products match this filter yet.

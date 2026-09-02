@@ -1,6 +1,5 @@
 import { NavGroup, FlatNavEntry } from "./types";
 
-// Auto-generated navigation data, sourced from the original Omni Docs app.js NAV config.
 export const NAV: NavGroup[] = [
   {
     title: "Getting Started",

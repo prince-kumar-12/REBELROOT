@@ -23,7 +23,7 @@ export function ProductCard({
     <motion.div
       variants={fadeUp}
       custom={index}
-      className="group relative flex h-full self-stretch flex-col overflow-hidden rounded-xl2 border border-base-border bg-base-card p-6 shadow-card transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:border-white/[0.14]"
+      className="group relative rounded-2xl flex h-full self-stretch flex-col overflow-hidden rounded-xl2 border border-base-border bg-base-card p-6 shadow-card transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:border-white/[0.14]"
     >
       <div
         className={cn(
