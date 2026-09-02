@@ -77,10 +77,8 @@ export function ContactContent() {
 
       console.log(data.message || "Message sent successfully.");
 
-      // Reset BEFORE changing the UI
-      form.reset();
 
-      // Show success screen
+      form.reset();
       setStatus("sent");
     } catch (error) {
       console.error("Contact fetch failed:", error);

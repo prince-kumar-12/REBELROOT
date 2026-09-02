@@ -2,75 +2,83 @@
 
 import { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, Send } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import Community from "@/components/layout/joinCommunity"
+import Community from "@/components/layout/joinCommunity";
 import { fadeUp } from "@/lib/motion";
 import { Eyebrow } from "@/components/ui/Badge";
+
 export function SupportContent() {
-  
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
-    
+  const [status, setStatus] = useState<"idle" | "sent">("idle");
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-  event.preventDefault();
+    event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
+    // Store the form before the async operation
+    const form = event.currentTarget;
 
-  const feedbackData = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    product: formData.get("product"),
-    rating: Number(formData.get("rating")),
-    message: formData.get("message"),
-  };
+    const formData = new FormData(form);
 
-  try {
-    const response = await fetch("/api/feedback", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(feedbackData),
-    });
-
-    // First get the raw response
-    const responseText = await response.text();
-
-    console.log("API status:", response.status);
-    console.log("API response:", responseText);
-
-    if (!response.ok) {
-      alert(responseText || "Failed to submit feedback.");
-      return;
-    }
-
-    let data;
+    const feedbackData = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      product: formData.get("product"),
+      rating: Number(formData.get("rating")),
+      message: formData.get("message"),
+    };
 
     try {
-      data = JSON.parse(responseText);
-    } catch {
-      console.error("API did not return valid JSON");
-      alert("Server returned an invalid response.");
-      return;
+      const response = await fetch("/api/feedback", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(feedbackData),
+      });
+
+      // First get the raw response
+      const responseText = await response.text();
+
+      console.log("API status:", response.status);
+      console.log("API response:", responseText);
+
+      if (!response.ok) {
+        alert(responseText || "Failed to submit feedback.");
+        return;
+      }
+
+      let data;
+
+      try {
+        data = JSON.parse(responseText);
+      } catch {
+        console.error("API did not return valid JSON");
+        alert("Server returned an invalid response.");
+        return;
+      }
+
+      // Reset form safely
+      form.reset();
+
+      // Reset rating
+      setRating(0);
+      setHoverRating(0);
+
+      // Show success message
+      setStatus("sent");
+
+      console.log(data.message || "Thank you for your feedback!");
+    } catch (error) {
+      console.error("Feedback fetch failed:", error);
+      alert("Could not connect to the feedback server.");
     }
-
-    alert(data.message || "Thank you for your feedback!");
-
-    event.currentTarget.reset();
-    setRating(0);
-    setHoverRating(0);
-  } catch (error) {
-    console.error("Feedback fetch failed:", error);
-    alert("Could not connect to the feedback server.");
   }
-}
 
   return (
     <>
-      
-
       <section className="section-pad pb-16 pt-40 lg:pt-48">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <Eyebrow>Support RebelRoot</Eyebrow>
@@ -98,7 +106,6 @@ export function SupportContent() {
         </div>
       </section>
 
-      
       <section className="section-pad pb-16">
         <motion.div
           variants={fadeUp}
@@ -120,13 +127,10 @@ export function SupportContent() {
           </p>
         </motion.div>
       </section>
- 
 
       <section className="section-pad pb-28">
         <div className="mx-auto max-w-7xl">
- 
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-2">
- 
             <motion.div
               variants={fadeUp}
               initial="hidden"
@@ -143,207 +147,222 @@ export function SupportContent() {
                 we can make our products better.
               </p>
 
-              <form
-                onSubmit={handleSubmit}
-                className="mt-7 space-y-5"
-              >
-              
-
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="mb-2 block text-sm font-medium text-ink"
-                  >
-                    Your Name
-                  </label>
-
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    autoComplete="name"
-                    placeholder="Name"
-                    className="h-14 w-full rounded-lg border border-base-border bg-transparent px-5 text-sm text-ink outline-none transition-all duration-200 placeholder:text-ink-muted focus:border-electric focus:ring-2 focus:ring-electric/20"
-                  />
-                </div>
-
-                
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-sm font-medium text-ink"
-                  >
-                    Your Email
-                  </label>
-
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    placeholder="Email Address"
-                    className="h-14 w-full rounded-lg border border-base-border bg-transparent px-5 text-sm text-ink outline-none transition-all duration-200 placeholder:text-ink-muted focus:border-electric focus:ring-2 focus:ring-electric/20"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="product"
-                    className="mb-2 block text-sm font-medium text-ink"
-                  >
-                    Select Product
-                  </label>
-
-                  <select
-                    id="product"
-                    name="product"
-                    defaultValue="general"
-                    required
-                    className="h-14 w-full appearance-none rounded-lg border border-base-border bg-base-card px-5 text-sm text-ink outline-none transition-all duration-200 focus:border-electric focus:ring-2 focus:ring-electric/20"
-                  >
-                    <option value="general">
-                      General / Platform
-                    </option>
-
-                    <option value="omni-browser">
-                      Omni Browser
-                    </option>
-
-                    <option value="mocnovel">
-                      MOCNovel
-                    </option>
-
-                    <option value="campcart">
-                      CampCart
-                    </option>
-
-                    <option value="moc-office">
-                      MOC Office
-                    </option>
-                  </select>
-                </div>
-
-                {/* RATING */}
-
-                <div>
-                  <span
-                    id="rating-label"
-                    className="mb-2 block text-sm font-medium text-ink"
-                  >
-                    Rate Your Experience
+              {status === "sent" ? (
+                <motion.div
+                  variants={fadeUp}
+                  initial="hidden"
+                  animate="visible"
+                  className="flex h-full flex-col items-center justify-center py-16 text-center"
+                >
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-electric/10 text-electric-soft">
+                    <Send className="h-6 w-6" />
                   </span>
- 
-                  <input
-                    type="hidden"
-                    name="rating"
-                    value={rating}
-                  />
 
-                  <div
-                    role="group"
-                    aria-labelledby="rating-label"
-                    className="flex items-center gap-1"
-                    onMouseLeave={() => setHoverRating(0)}
-                  >
-                    {[1, 2, 3, 4, 5].map((star) => {
-                      const activeRating =
-                        hoverRating || rating;
+                  <h2 className="mt-6 text-xl font-medium text-ink">
+                    Message sent
+                  </h2>
 
-                      const isActive =
-                        star <= activeRating;
+                  <p className="mt-2 max-w-xs text-sm text-ink-muted">
+                    Thanks for reaching out — we&rsquo;ll get back to you
+                    within two business days.
+                  </p>
+                </motion.div>
+              ) : (
+                <form
+                  onSubmit={handleSubmit}
+                  className="mt-7 space-y-5"
+                >
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="mb-2 block text-sm font-medium text-ink"
+                    >
+                      Your Name
+                    </label>
 
-                      return (
-                        <button
-                          key={star}
-                          type="button"
-                          aria-label={`Rate ${star} out of 5`}
-                          onMouseEnter={() =>
-                            setHoverRating(star)
-                          }
-                          onFocus={() =>
-                            setHoverRating(star)
-                          }
-                          onBlur={() =>
-                            setHoverRating(0)
-                          }
-                          onClick={() =>
-                            setRating(star)
-                          }
-                          className="group flex h-10 w-10 items-center justify-center rounded-lg outline-none"
-                        >
-                          <Star
-                            aria-hidden="true"
-                            strokeWidth={1.5}
-                            className={`
-                              h-7 w-7
-                              transition-all
-                              duration-200
-                              ease-out
-                              ${
-                                isActive
-                                  ? "fill-yellow-400 text-yellow-400"
-                                  : "fill-transparent text-ink-muted"
-                              }
-                              group-hover:scale-125
-                              group-focus-visible:scale-125
-                              group-focus-visible:ring-2
-                              group-focus-visible:ring-electric
-                              group-focus-visible:ring-offset-2
-                            `}
-                          />
-                        </button>
-                      );
-                    })}
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      autoComplete="name"
+                      placeholder="Name"
+                      className="h-14 w-full rounded-lg border border-base-border bg-transparent px-5 text-sm text-ink outline-none transition-all duration-200 placeholder:text-ink-muted focus:border-electric focus:ring-2 focus:ring-electric/20"
+                    />
                   </div>
 
-                  <p
-                    aria-live="polite"
-                    className="mt-1 min-h-5 text-xs text-ink-muted"
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="mb-2 block text-sm font-medium text-ink"
+                    >
+                      Your Email
+                    </label>
+
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      autoComplete="email"
+                      placeholder="Email Address"
+                      className="h-14 w-full rounded-lg border border-base-border bg-transparent px-5 text-sm text-ink outline-none transition-all duration-200 placeholder:text-ink-muted focus:border-electric focus:ring-2 focus:ring-electric/20"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="product"
+                      className="mb-2 block text-sm font-medium text-ink"
+                    >
+                      Select Product
+                    </label>
+
+                    <select
+                      id="product"
+                      name="product"
+                      defaultValue="general"
+                      required
+                      className="h-14 w-full appearance-none rounded-lg border border-base-border bg-base-card px-5 text-sm text-ink outline-none transition-all duration-200 focus:border-electric focus:ring-2 focus:ring-electric/20"
+                    >
+                      <option value="general">
+                        General / Platform
+                      </option>
+
+                      <option value="omni-browser">
+                        Omni Browser
+                      </option>
+
+                      <option value="mocnovel">
+                        MOCNovel
+                      </option>
+
+                      <option value="campcart">
+                        CampCart
+                      </option>
+
+                      <option value="moc-office">
+                        MOC Office
+                      </option>
+                    </select>
+                  </div>
+
+                  {/* RATING */}
+
+                  <div>
+                    <span
+                      id="rating-label"
+                      className="mb-2 block text-sm font-medium text-ink"
+                    >
+                      Rate Your Experience
+                    </span>
+
+                    <input
+                      type="hidden"
+                      name="rating"
+                      value={rating}
+                    />
+
+                    <div
+                      role="group"
+                      aria-labelledby="rating-label"
+                      className="flex items-center gap-1"
+                      onMouseLeave={() => setHoverRating(0)}
+                    >
+                      {[1, 2, 3, 4, 5].map((star) => {
+                        const activeRating = hoverRating || rating;
+
+                        const isActive = star <= activeRating;
+
+                        return (
+                          <button
+                            key={star}
+                            type="button"
+                            aria-label={`Rate ${star} out of 5`}
+                            onMouseEnter={() =>
+                              setHoverRating(star)
+                            }
+                            onFocus={() =>
+                              setHoverRating(star)
+                            }
+                            onBlur={() =>
+                              setHoverRating(0)
+                            }
+                            onClick={() =>
+                              setRating(star)
+                            }
+                            className="group flex h-10 w-10 items-center justify-center rounded-lg outline-none"
+                          >
+                            <Star
+                              aria-hidden="true"
+                              strokeWidth={1.5}
+                              className={`
+                                h-7 w-7
+                                transition-all
+                                duration-200
+                                ease-out
+                                ${
+                                  isActive
+                                    ? "fill-yellow-400 text-yellow-400"
+                                    : "fill-transparent text-ink-muted"
+                                }
+                                group-hover:scale-125
+                                group-focus-visible:scale-125
+                                group-focus-visible:ring-2
+                                group-focus-visible:ring-electric
+                                group-focus-visible:ring-offset-2
+                              `}
+                            />
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    <p
+                      aria-live="polite"
+                      className="mt-1 min-h-5 text-xs text-ink-muted"
+                    >
+                      {rating
+                        ? `${rating} out of 5`
+                        : "Select a rating"}
+                    </p>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="mb-2 block text-sm font-medium text-ink"
+                    >
+                      Message
+                    </label>
+
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      placeholder="Describe your experience, report a bug, or suggest a new feature..."
+                      className="w-full resize-y rounded-lg border border-base-border bg-transparent px-5 py-4 text-sm text-ink outline-none transition-all duration-200 placeholder:text-ink-muted focus:border-electric focus:ring-2 focus:ring-electric/20"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    aria-label="Submit feedback"
+                    className="group flex h-14 w-full items-center justify-center gap-2 rounded-lg px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
                   >
-                    {rating
-                      ? `${rating} out of 5`
-                      : "Select a rating"}
-                  </p>
-                </div> 
+                    SUBMIT FEEDBACK
 
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-sm font-medium text-ink"
-                  >
-                    Message
-                  </label>
-
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    placeholder="Describe your experience, report a bug, or suggest a new feature..."
-                    className="w-full resize-y rounded-lg border border-base-border bg-transparent px-5 py-4 text-sm text-ink outline-none transition-all duration-200 placeholder:text-ink-muted focus:border-electric focus:ring-2 focus:ring-electric/20"
-                  />
-                </div>
- 
-                <Button
-                  type="submit"
-                  aria-label="Submit feedback"
-                  className="group flex h-14 w-full items-center justify-center gap-2 rounded-lg   px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5   hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
-                >
-                  SUBMIT FEEDBACK
-
-                  <ArrowRight
-                    aria-hidden="true"
-                    className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                  />
-                </Button>
-              </form>
+                    <ArrowRight
+                      aria-hidden="true"
+                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </Button>
+                </form>
+              )}
             </motion.div>
- 
-            <div className="flex flex-col gap-8">
 
+            <div className="flex flex-col gap-8">
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -388,7 +407,7 @@ export function SupportContent() {
                   </span>
 
                   <span className="ml-2 font-mono text-sm font-semibold text-green-400">
-                   warrior4root@ptyes
+                    warrior4root@ptyes
                   </span>
                 </div>
               </motion.div>
@@ -418,7 +437,7 @@ export function SupportContent() {
                     INTERNATIONAL
                   </span>
                 </div>
- 
+
                 <div className="mt-5 flex justify-center">
                   <div className="h-44 w-44 overflow-hidden rounded-xl bg-white p-3 shadow-md">
                     <Image
@@ -436,8 +455,7 @@ export function SupportContent() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Support RebelRoot through PayPal"
-                  className="group flex h-14 w-full items-center my-10 justify-center gap-2 rounded-lg   px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5   hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
-                    
+                  className="group flex h-14 w-full items-center my-10 justify-center gap-2 rounded-lg px-6 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
                 >
                   SUPPORT VIA PAYPAL
 
@@ -449,7 +467,6 @@ export function SupportContent() {
               </motion.div>
             </div>
           </div>
- 
 
           <motion.div
             variants={fadeUp}
@@ -460,7 +477,6 @@ export function SupportContent() {
             className="payment-shadow mt-8 rounded-2xl border border-base-border bg-base-card/70 p-6 sm:p-8"
           >
             <div className="flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
-
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.16em] text-electric-soft">
                   Open Source
@@ -482,8 +498,7 @@ export function SupportContent() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Support RebelRoot development on GitHub"
-                className="group flex h-14 shrink-0 items-center justify-center gap-2 rounded-lg px-7 text-sm font-semibold text-black transition-all duration-300  hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
-                
+                className="group flex h-14 shrink-0 items-center justify-center gap-2 rounded-lg px-7 text-sm font-semibold text-black transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20 active:translate-y-0"
               >
                 SUPPORT ON GITHUB
 
@@ -496,7 +511,8 @@ export function SupportContent() {
           </motion.div>
         </div>
       </section>
-      <Community/>
+
+      <Community />
     </>
   );
 }
